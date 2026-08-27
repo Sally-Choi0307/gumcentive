@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="세종 금거래소 금센티브. 순금, 18K, 14K, 골드바, 은 매입 및 판매 상담." />
+  <meta name="description" content="세종 금거래소 금센티브. 순금 24K, 18K, 14K, 골드바, 은 제품 매입 및 판매 상담. 세종 산울동 위치." />
   <title>금센티브 | 세종 금거래소</title>
-
   <style>
     :root {
       --bg: #f8f2e4;
-      --bg-soft: #fffaf0;
       --gold: #a88755;
       --gold-dark: #6e5332;
       --text: #2d2924;
@@ -19,466 +17,124 @@
       --shadow: 0 18px 50px rgba(88, 66, 36, 0.12);
       --radius: 24px;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Pretendard, "Noto Sans KR", Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top right, rgba(207, 178, 117, 0.18), transparent 32%),
-        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+      background: radial-gradient(circle at top right, rgba(207,178,117,.18), transparent 32%), linear-gradient(180deg,#fffdf8 0%,var(--bg) 100%);
       line-height: 1.65;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
     header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255, 253, 248, 0.9);
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,253,248,.92);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
     }
-
-    .nav {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
+    .nav { min-height: 74px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.03em; }
     .brand-mark {
-      width: 44px;
-      height: 30px;
-      border: 5px solid var(--gold);
-      border-bottom-width: 8px;
-      clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
+      width:44px; height:30px; border:5px solid var(--gold); border-bottom-width:8px;
+      clip-path: polygon(18% 0,82% 0,100% 100%,0 100%);
     }
-
-    .brand small {
-      display: block;
-      font-size: 11px;
-      color: var(--gold-dark);
-      letter-spacing: 0.16em;
-      font-weight: 700;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .menu a:hover {
-      color: var(--gold-dark);
-    }
-
-    .hero {
-      padding: 100px 0 74px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--gold-dark);
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      font-size: 13px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 74px);
-      line-height: 1.05;
-      letter-spacing: -0.06em;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      font-size: 19px;
-      color: var(--muted);
-      max-width: 650px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
+    .brand small { display:block; font-size:11px; color:var(--gold-dark); letter-spacing:.16em; font-weight:700; }
+    .menu { display:flex; align-items:center; gap:22px; font-size:14px; color:var(--muted); }
+    .hero { padding:100px 0 74px; }
+    .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
+    .eyebrow { color:var(--gold-dark); font-weight:800; letter-spacing:.14em; font-size:13px; margin-bottom:14px; }
+    h1 { font-size:clamp(42px,7vw,74px); line-height:1.05; letter-spacing:-.06em; margin-bottom:24px; }
+    .hero p { font-size:19px; color:var(--muted); max-width:650px; }
+    .hero-buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 999px;
-      font-weight: 800;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
+      display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 22px;
+      border-radius:999px; font-weight:800; transition:.2s ease; border:1px solid transparent;
     }
-
-    .btn-primary {
-      background: var(--gold-dark);
-      color: white;
-      box-shadow: 0 12px 30px rgba(110, 83, 50, 0.24);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.7);
-      border-color: var(--line);
-    }
-
+    .btn-primary { background:var(--gold-dark); color:white; box-shadow:0 12px 30px rgba(110,83,50,.24); }
+    .btn-secondary { background:rgba(255,255,255,.8); border-color:var(--line); }
     .hero-card {
-      background: rgba(255,255,255,0.8);
-      border: 1px solid rgba(168, 135, 85, 0.22);
-      border-radius: 34px;
-      padding: 34px;
-      box-shadow: var(--shadow);
+      background:rgba(255,255,255,.82); border:1px solid rgba(168,135,85,.22); border-radius:34px;
+      padding:34px; box-shadow:var(--shadow);
     }
-
-    .hero-card .label {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .hero-card .big {
-      font-size: 26px;
-      font-weight: 900;
-      color: var(--gold-dark);
-      margin-bottom: 18px;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      color: var(--muted);
-    }
-
-    section {
-      padding: 76px 0;
-    }
-
-    .section-title {
-      margin-bottom: 30px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(30px, 4vw, 46px);
-      letter-spacing: -0.05em;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .price-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      padding: 26px;
-      box-shadow: 0 10px 28px rgba(73, 54, 31, 0.06);
-    }
-
-    .price-card h3 {
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-
-    .price-card .unit {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .price-row {
-      padding-top: 15px;
-      border-top: 1px dashed var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: end;
-    }
-
-    .price-row span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .price-row strong {
-      color: var(--gold-dark);
-      font-size: 21px;
-      white-space: nowrap;
-    }
-
-    .notice {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .service {
-      padding: 28px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--line);
-    }
-
-    .service h3 {
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .service p {
-      color: var(--muted);
-    }
-
-    .location {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .panel {
-      background: white;
-      border-radius: var(--radius);
-      padding: 30px;
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 30px rgba(73, 54, 31, 0.06);
-    }
-
-    .address {
-      font-weight: 900;
-      font-size: 21px;
-      color: var(--gold-dark);
-      margin: 10px 0 22px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 13px;
-      color: var(--muted);
-    }
-
-    .steps div {
-      display: grid;
-      grid-template-columns: 30px 1fr;
-      gap: 10px;
-    }
-
-    .steps b {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--bg);
-      display: grid;
-      place-items: center;
-      color: var(--gold-dark);
-    }
-
+    .hero-card .label { font-size:13px; color:var(--muted); margin-bottom:8px; }
+    .hero-card .big { font-size:26px; font-weight:900; color:var(--gold-dark); margin-bottom:18px; }
+    .hero-card ul { list-style:none; display:grid; gap:12px; color:var(--muted); }
+    section { padding:76px 0; }
+    .section-title { margin-bottom:30px; }
+    .section-title h2 { font-size:clamp(30px,4vw,46px); letter-spacing:-.05em; margin-bottom:10px; }
+    .section-title p { color:var(--muted); }
+    .price-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .price-card { background:var(--white); border-radius:var(--radius); border:1px solid var(--line); padding:26px; box-shadow:0 10px 28px rgba(73,54,31,.06); }
+    .price-card h3 { font-size:22px; margin-bottom:4px; }
+    .price-card .unit { color:var(--muted); font-size:14px; margin-bottom:20px; }
+    .price-row { padding-top:15px; border-top:1px dashed var(--line); display:flex; justify-content:space-between; gap:10px; align-items:end; }
+    .price-row span { color:var(--muted); font-size:14px; }
+    .price-row strong { color:var(--gold-dark); font-size:21px; white-space:nowrap; }
+    .notice { margin-top:18px; color:var(--muted); font-size:14px; }
+    .service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .service { padding:28px; border-radius:var(--radius); background:rgba(255,255,255,.74); border:1px solid var(--line); }
+    .service h3 { margin-bottom:8px; font-size:20px; }
+    .service p { color:var(--muted); }
+    .location { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .panel { background:white; border-radius:var(--radius); padding:30px; border:1px solid var(--line); box-shadow:0 10px 30px rgba(73,54,31,.06); }
+    .address { font-weight:900; font-size:21px; color:var(--gold-dark); margin:10px 0 18px; }
+    .map-actions { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
+    .steps { display:grid; gap:13px; color:var(--muted); }
+    .steps div { display:grid; grid-template-columns:30px 1fr; gap:10px; }
+    .steps b { width:28px; height:28px; border-radius:50%; background:var(--bg); display:grid; place-items:center; color:var(--gold-dark); }
     .video-box {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        linear-gradient(rgba(67, 49, 28, 0.72), rgba(67, 49, 28, 0.72)),
-        url("https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80") center/cover;
-      color: white;
+      min-height:100%; display:flex; flex-direction:column; justify-content:center;
+      background:linear-gradient(rgba(67,49,28,.72),rgba(67,49,28,.72)),
+      url("https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=80") center/cover;
+      color:white;
     }
-
-    .video-box p {
-      margin: 10px 0 24px;
-      color: rgba(255,255,255,0.82);
-    }
-
-    .video-box .btn {
-      align-self: flex-start;
-      background: white;
-      color: var(--gold-dark);
-    }
-
+    .video-box p { margin:10px 0 24px; color:rgba(255,255,255,.82); }
+    .video-box .btn { align-self:flex-start; background:white; color:var(--gold-dark); }
     .benefit {
-      background: linear-gradient(135deg, #6e5332, #a88755);
-      color: white;
-      border-radius: 32px;
-      padding: 40px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
+      background:linear-gradient(135deg,#6e5332,#a88755); color:white; border-radius:32px; padding:40px;
+      display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;
     }
+    .benefit p { color:rgba(255,255,255,.82); }
+    .benefit-list { margin-top:14px; display:grid; gap:8px; font-weight:700; }
+    .cta { text-align:center; padding-bottom:100px; }
+    .cta-box { background:white; padding:50px 28px; border-radius:32px; border:1px solid var(--line); box-shadow:var(--shadow); }
+    .cta h2 { font-size:clamp(30px,5vw,50px); margin-bottom:12px; letter-spacing:-.05em; }
+    .cta p { color:var(--muted); margin-bottom:26px; }
+    footer { border-top:1px solid var(--line); padding:34px 0 50px; color:var(--muted); font-size:14px; }
+    .footer-row { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .floating-contact { position:fixed; right:18px; bottom:18px; z-index:30; display:flex; flex-direction:column; gap:10px; }
+    .floating-contact a { min-width:142px; min-height:46px; padding:0 16px; border-radius:999px; display:flex; align-items:center; justify-content:center; font-weight:800; box-shadow:0 10px 24px rgba(0,0,0,.15); }
+    .floating-call { background:var(--gold-dark); color:white; }
+    .floating-kakao { background:#fee500; color:#191919; }
 
-    .benefit p {
-      color: rgba(255,255,255,0.82);
+    @media (max-width:900px) {
+      .menu { display:none; }
+      .hero { padding-top:70px; }
+      .hero-grid, .location, .benefit { grid-template-columns:1fr; }
+      .price-grid { grid-template-columns:repeat(2,1fr); }
+      .service-grid { grid-template-columns:1fr; }
     }
-
-    .benefit-list {
-      margin-top: 14px;
-      display: grid;
-      gap: 8px;
-      font-weight: 700;
-    }
-
-    .cta {
-      text-align: center;
-      padding-bottom: 100px;
-    }
-
-    .cta-box {
-      background: white;
-      padding: 50px 28px;
-      border-radius: 32px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .cta h2 {
-      font-size: clamp(30px, 5vw, 50px);
-      margin-bottom: 12px;
-      letter-spacing: -0.05em;
-    }
-
-    .cta p {
-      color: var(--muted);
-      margin-bottom: 26px;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 34px 0 50px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 900px) {
-      .menu {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 70px;
-      }
-
-      .hero-grid,
-      .location,
-      .benefit {
-        grid-template-columns: 1fr;
-      }
-
-      .price-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        width: min(100% - 24px, 1120px);
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      .price-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card,
-      .panel,
-      .price-card,
-      .service {
-        padding: 22px;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-      }
-
-      .benefit {
-        padding: 28px 22px;
-      }
+    @media (max-width:560px) {
+      .container { width:min(100% - 24px,1120px); }
+      h1 { font-size:48px; }
+      .price-grid { grid-template-columns:1fr; }
+      .hero-card, .panel, .price-card, .service { padding:22px; }
+      .hero-buttons .btn, .map-actions .btn { width:100%; }
+      .benefit { padding:28px 22px; }
+      .floating-contact { left:12px; right:12px; bottom:12px; flex-direction:row; }
+      .floating-contact a { flex:1; min-width:0; }
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="금센티브 홈">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          금센티브
-          <small>GUMCENTIVE</small>
-        </span>
+      <a class="brand" href="#top">
+        <span class="brand-mark"></span>
+        <span>금센티브<small>GUMCENTIVE</small></span>
       </a>
-
-      <nav class="menu" aria-label="주요 메뉴">
+      <nav class="menu">
         <a href="#price">오늘의 시세</a>
         <a href="#service">서비스</a>
         <a href="#location">오시는 길</a>
@@ -494,11 +150,7 @@
         <div>
           <div class="eyebrow">GOLD + INCENTIVE</div>
           <h1>현금보다 오래 남는 가치를 전합니다.</h1>
-          <p>
-            금센티브는 세종 산울동에 위치한 금거래소입니다.
-            순금, 18K, 14K, 골드바와 은 제품의 매입 및 판매를 상담해드립니다.
-          </p>
-
+          <p>금센티브는 세종 산울동에 위치한 금거래소입니다. 순금, 18K, 14K, 골드바와 은 제품의 매입 및 판매를 상담해드립니다.</p>
           <div class="hero-buttons">
             <a class="btn btn-primary" href="tel:0444176980">전화 상담 044-417-6980</a>
             <a class="btn btn-secondary" href="https://open.kakao.com/o/sTK6ElFi" target="_blank" rel="noopener">카카오톡 1:1 상담</a>
@@ -524,49 +176,25 @@
           <h2>오늘의 금시세</h2>
           <p>금시세는 국제 시세와 환율에 따라 수시로 변동됩니다.</p>
         </div>
-
         <div class="price-grid">
           <article class="price-card">
-            <h3>순금 24K</h3>
-            <div class="unit">3.75g 기준</div>
-            <div class="price-row">
-              <span>판매 및 매입</span>
-              <strong>변동</strong>
-            </div>
+            <h3>순금 24K</h3><div class="unit">3.75g 기준</div>
+            <div class="price-row"><span>판매 및 매입</span><strong>변동</strong></div>
           </article>
-
           <article class="price-card">
-            <h3>18K 금시세</h3>
-            <div class="unit">3.75g 기준</div>
-            <div class="price-row">
-              <span>제품별 적용</span>
-              <strong>문의</strong>
-            </div>
+            <h3>18K 금시세</h3><div class="unit">3.75g 기준</div>
+            <div class="price-row"><span>제품별 적용</span><strong>문의</strong></div>
           </article>
-
           <article class="price-card">
-            <h3>14K 금시세</h3>
-            <div class="unit">3.75g 기준</div>
-            <div class="price-row">
-              <span>제품별 적용</span>
-              <strong>문의</strong>
-            </div>
+            <h3>14K 금시세</h3><div class="unit">3.75g 기준</div>
+            <div class="price-row"><span>제품별 적용</span><strong>문의</strong></div>
           </article>
-
           <article class="price-card">
-            <h3>은시세</h3>
-            <div class="unit">제품 및 중량별</div>
-            <div class="price-row">
-              <span>판매 및 매입</span>
-              <strong>문의</strong>
-            </div>
+            <h3>은시세</h3><div class="unit">제품 및 중량별</div>
+            <div class="price-row"><span>판매 및 매입</span><strong>문의</strong></div>
           </article>
         </div>
-
-        <p class="notice">
-          실제 거래 금액은 제품 상태, 함량, 중량, 당일 시세에 따라 달라질 수 있습니다.
-          정확한 금액은 전화 또는 카카오톡으로 문의해 주세요.
-        </p>
+        <p class="notice">실제 거래 금액은 제품 상태, 함량, 중량, 당일 시세에 따라 달라질 수 있습니다. 정확한 금액은 전화 또는 카카오톡으로 문의해 주세요.</p>
       </div>
     </section>
 
@@ -576,22 +204,10 @@
           <h2>금센티브 서비스</h2>
           <p>판매부터 매입까지 필요한 상담을 한 번에 도와드립니다.</p>
         </div>
-
         <div class="service-grid">
-          <article class="service">
-            <h3>순금 및 골드바</h3>
-            <p>순금 제품과 골드바의 판매 및 매입 시세를 안내해드립니다.</p>
-          </article>
-
-          <article class="service">
-            <h3>18K, 14K 매입</h3>
-            <p>반지, 목걸이, 팔찌, 귀걸이 등 제품별 중량과 함량을 확인합니다.</p>
-          </article>
-
-          <article class="service">
-            <h3>금시세 상담</h3>
-            <p>방문 전 전화나 카카오톡으로 당일 시세와 거래 방법을 상담할 수 있습니다.</p>
-          </article>
+          <article class="service"><h3>순금 및 골드바</h3><p>순금 제품과 골드바의 판매 및 매입 시세를 안내해드립니다.</p></article>
+          <article class="service"><h3>18K, 14K 매입</h3><p>반지, 목걸이, 팔찌, 귀걸이 등 제품별 중량과 함량을 확인합니다.</p></article>
+          <article class="service"><h3>금시세 상담</h3><p>방문 전 전화나 카카오톡으로 당일 시세와 거래 방법을 상담할 수 있습니다.</p></article>
         </div>
       </div>
     </section>
@@ -604,26 +220,32 @@
         </div>
 
         <div class="location">
-<div class="panel">
-  <h3>금센티브 주소</h3>
-  <div class="address">세종시 산울7로 11, 712동 1층 E-115호</div>
+          <div class="panel">
+            <h3>금센티브 주소</h3>
+            <div class="address">세종시 산울7로 11, 712동 1층 E-115호</div>
 
-  <div class="hero-buttons" style="margin-top:0; margin-bottom:25px;">
-    <a class="btn btn-primary"
-       href="https://naver.me/5JqeQaQX"
-       target="_blank"
-       rel="noopener">
-      네이버 지도에서 보기
-    </a>
-  </div>
+            <div class="map-actions">
+              <a class="btn btn-primary" href="https://naver.me/5JqeQaQX" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+              <a class="btn btn-secondary" href="https://youtube.com/shorts/aBbcXD168M8?si=4FcqOVWr9ndMyN5z" target="_blank" rel="noopener">영상으로 길 안내 보기</a>
+            </div>
 
-  <div class="steps">
-    <div><b>1</b><span>산울7단지 상가 주차장으로 들어와 주세요.</span></div>
-    <div><b>2</b><span>712동 앞에 주차 후 엘리베이터를 이용해 1층으로 올라오세요.</span></div>
-    <div><b>3</b><span>엘리베이터에서 나오신 후 왼쪽으로 이동하면 금센티브 E-115호가 있습니다.</span></div>
-    <div><b>4</b><span>산울동 서브웨이 건물에서 조금 더 아래쪽으로 내려오시면 쉽게 찾으실 수 있습니다.</span></div>
-  </div>
-</div>
+            <div class="steps">
+              <div><b>1</b><span>산울7단지 상가 주차장으로 들어와 주세요.</span></div>
+              <div><b>2</b><span>712동 앞에 주차 후 엘리베이터를 이용해 1층으로 올라오세요.</span></div>
+              <div><b>3</b><span>엘리베이터에서 나오신 후 왼쪽으로 이동하면 금센티브 E-115호가 있습니다.</span></div>
+              <div><b>4</b><span>산울동 서브웨이 건물에서 조금 더 아래쪽으로 내려오시면 쉽게 찾으실 수 있습니다.</span></div>
+            </div>
+          </div>
+
+          <div class="panel video-box">
+            <h3>처음 방문하시나요?</h3>
+            <p>네이버 지도에서 위치를 바로 확인하거나 유튜브 길 안내 영상을 보시면 더 쉽게 찾아오실 수 있습니다.</p>
+            <a class="btn" href="https://naver.me/5JqeQaQX" target="_blank" rel="noopener">네이버 지도 열기</a>
+          </div>
+        </div>
+
+        <p class="notice" style="margin-top:20px;">찾아오시는 길이 어려우시면 언제든 편하게 연락 주세요.</p>
+      </div>
     </section>
 
     <section id="benefit">
@@ -648,10 +270,10 @@
           <div class="eyebrow">CONTACT</div>
           <h2>당일 시세가 궁금하신가요?</h2>
           <p>금시세는 수시로 변동되므로 방문 전 문의해 주세요.</p>
-
           <div class="hero-buttons" style="justify-content:center;">
             <a class="btn btn-primary" href="tel:0444176980">044-417-6980 전화하기</a>
             <a class="btn btn-secondary" href="https://open.kakao.com/o/sTK6ElFi" target="_blank" rel="noopener">카카오톡 1:1 상담</a>
+            <a class="btn btn-secondary" href="https://naver.me/5JqeQaQX" target="_blank" rel="noopener">네이버 지도 보기</a>
           </div>
         </div>
       </div>
@@ -660,15 +282,14 @@
 
   <footer>
     <div class="container footer-row">
-      <div>
-        <strong>금센티브</strong><br />
-        세종시 산울7로 11, 712동 1층 E-115호
-      </div>
-      <div>
-        대표전화 044-417-6980<br />
-        Gold + Incentive = GUMCENTIVE
-      </div>
+      <div><strong>금센티브</strong><br />세종시 산울7로 11, 712동 1층 E-115호</div>
+      <div>대표전화 044-417-6980<br />Gold + Incentive = GUMCENTIVE</div>
     </div>
   </footer>
+
+  <div class="floating-contact">
+    <a class="floating-call" href="tel:0444176980">전화하기</a>
+    <a class="floating-kakao" href="https://open.kakao.com/o/sTK6ElFi" target="_blank" rel="noopener">카톡 상담</a>
+  </div>
 </body>
 </html>

@@ -1195,38 +1195,23 @@
 
 const CONFIG = {
 
-  /* 1 트로이온스 */
   TROY_OZ_GRAMS: 31.1034768,
-
-  /* 1돈 */
   DON_GRAMS: 3.75,
 
-  /*
-   내가 살 때 가격 보정
-   VAT는 포함하지 않음
-  */
-  BUY_PREMIUM_EX_VAT: 1.06577,
+  /* 내가 살 때 - VAT 별도 */
+  BUY_PREMIUM_EX_VAT: 1.0612,
 
-  /*
-   국제 금값 → 국내 24K 매입가
-   역산 보정계수
-  */
-  SELL_BASE_FACTOR: 0.97808,
+  /* 24K 기본 매입가 보정 */
+  SELL_BASE_FACTOR: 0.9825,
 
-  /*
-   금센티브 24K 추가 지급
-  */
+  /* 24K 금센티브 추가 지급 */
   SELL_24_BONUS: 4000,
 
-  /*
-   18K / 14K 적용률
-  */
-  SELL_18_FACTOR: 0.735,
-  SELL_14_FACTOR: 0.570,
+  /* 18K / 14K 적용률 */
+  SELL_18_FACTOR: 0.7424,
+  SELL_14_FACTOR: 0.5772,
 
-  /*
-   1분마다 갱신
-  */
+  /* 1분마다 갱신 */
   REFRESH_MS: 60000
 };
 

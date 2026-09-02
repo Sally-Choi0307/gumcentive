@@ -2562,195 +2562,84 @@ function render(
   isCached = false
 ) {
 
-
-  const gold =
-    Number(data.gold);
-
-
-  const fx =
-    Number(data.fx);
-
-
+  const gold = Number(data.gold);
+  const fx = Number(data.fx);
 
   /*
+    국제 금시세 기준
     순금 3.75g 원재료 환산가
-
-    국제 금값
-    × 환율
-    ÷ 트로이온스
-    × 3.75g
   */
-
   const raw =
-
     gold
-
     * fx
-
     / CONFIG.TROY_OZ_GRAMS
-
     * CONFIG.DON_GRAMS;
 
-/*
-  ========================================
-  금센티브 고정 시세
-  2026년 9월 2일
-  ========================================
-*/
-
-const buy24 = 750000;   // 24K 내가 살 때 (VAT 별도)
-
-const sell24 = 718000;  // 24K 내가 팔 때
-
-const sell18 = 527000;  // 18K 내가 팔 때
-
-const sell14 = 408000;  // 14K 내가 팔 때
 
   /*
-    내가 살 때
-    VAT 별도
+    ========================================
+    금센티브 고정 시세
+    2026년 9월 2일
+    ========================================
   */
 
-
-
-  /*
-    24K 금센티브 매입가
-
-    +4,000원
-  */
-
-  const sell24 =
-
-    baseSell24
-
-    + CONFIG.SELL_24_BONUS;
-
-
-
-  /*
-    18K
-  */
-
-  const sell18 =
-
-    round100(
-
-      baseSell24
-
-      * CONFIG.SELL_18_FACTOR
-
-    );
-
-
-
-  /*
-    14K
-  */
-
-  const sell14 =
-
-    round100(
-
-      baseSell24
-
-      * CONFIG.SELL_14_FACTOR
-
-    );
-
+  const buy24 = 750000;
+  const sell24 = 718000;
+  const sell18 = 527000;
+  const sell14 = 408000;
 
 
   document
-    .getElementById(
-      "goldSpot"
-    )
+    .getElementById("goldSpot")
     .textContent =
-
-    "$"
-    + num(gold,2);
-
+    "$" + num(gold, 2);
 
 
   document
-    .getElementById(
-      "usdKrw"
-    )
+    .getElementById("usdKrw")
     .textContent =
-
-    num(fx,2)
-    + "원";
-
+    num(fx, 2) + "원";
 
 
   document
-    .getElementById(
-      "rawGold"
-    )
+    .getElementById("rawGold")
     .textContent =
-
-    won(
-      round100(raw)
-    );
-
+    won(round100(raw));
 
 
   document
-    .getElementById(
-      "buy24"
-    )
+    .getElementById("buy24")
     .textContent =
-
     won(buy24);
 
 
-
   document
-    .getElementById(
-      "sell24"
-    )
+    .getElementById("sell24")
     .textContent =
-
     won(sell24);
 
 
-
   document
-    .getElementById(
-      "sell18"
-    )
+    .getElementById("sell18")
     .textContent =
-
     won(sell18);
 
 
-
   document
-    .getElementById(
-      "sell14"
-    )
+    .getElementById("sell14")
     .textContent =
-
     won(sell14);
 
 
-
   const dt =
-
     new Date(
-
-      data.timestamp
-
-      || Date.now()
-
+      data.timestamp || Date.now()
     );
 
 
-
   document
-    .getElementById(
-      "updatedAt"
-    )
+    .getElementById("updatedAt")
     .textContent =
-
     dt.toLocaleString(
       "ko-KR",
       {
@@ -2765,35 +2654,22 @@ const sell14 = 408000;  // 14K 내가 팔 때
     );
 
 
-
   document
-    .getElementById(
-      "marketStatus"
-    )
+    .getElementById("marketStatus")
     .textContent =
-
     isCached
-
-      ? "저장된 최근 시세를 표시 중입니다."
-
-      : "1분마다 자동 갱신됩니다.";
-
+      ? "저장된 최근 국제시세를 표시 중입니다."
+      : "국제 금시세와 환율은 1분마다 갱신됩니다.";
 
 
   document
-    .getElementById(
-      "errorBox"
-    )
+    .getElementById("errorBox")
     .style.display =
-
     isCached
-
       ? "block"
-
       : "none";
 
 }
-
 
 
 /* ========================================

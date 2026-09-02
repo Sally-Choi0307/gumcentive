@@ -2591,38 +2591,25 @@ function render(
 
     * CONFIG.DON_GRAMS;
 
+/*
+  ========================================
+  금센티브 고정 시세
+  2026년 9월 2일
+  ========================================
+*/
 
+const buy24 = 750000;   // 24K 내가 살 때 (VAT 별도)
+
+const sell24 = 718000;  // 24K 내가 팔 때
+
+const sell18 = 527000;  // 18K 내가 팔 때
+
+const sell14 = 408000;  // 14K 내가 팔 때
 
   /*
     내가 살 때
     VAT 별도
   */
-
-  const buy24 =
-
-    round1000(
-
-      raw
-
-      * CONFIG.BUY_PREMIUM_EX_VAT
-
-    );
-
-
-
-  /*
-    기본 24K 매입가
-  */
-
-  const baseSell24 =
-
-    round100(
-
-      raw
-
-      * CONFIG.SELL_BASE_FACTOR
-
-    );
 
 
 

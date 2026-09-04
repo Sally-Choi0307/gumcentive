@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="세종 금거래소 금센티브. 순금, 골드바, 18K, 14K, 은수저, 은제품, 치금 매입 및 금시세 상담."
+    content="세종 금거래소 금센티브. 순금, 골드바, 18K, 14K, 은수저, 은제품, 치금 매입 및 순금 선물 주문 상담."
   >
 
   <title>금센티브 | 세종 금거래소</title>
@@ -131,14 +131,12 @@
     header {
       position: sticky;
       top: 0;
-
       z-index: 100;
 
       background:
         rgba(255,253,248,.96);
 
-      backdrop-filter:
-        blur(16px);
+      backdrop-filter: blur(16px);
 
       border-bottom:
         1px solid var(--line);
@@ -222,13 +220,11 @@
 
     .nav-menu {
       display: flex;
-
       align-items: center;
 
-      gap: 27px;
+      gap: 24px;
 
       font-size: 14px;
-
       font-weight: 750;
 
       color: #514b44;
@@ -298,8 +294,7 @@
 
 
     .btn:hover {
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
     }
 
 
@@ -329,8 +324,7 @@
     =================================== */
 
     .hero {
-      padding:
-        34px 0 34px;
+      padding: 34px 0;
     }
 
 
@@ -394,7 +388,6 @@
       color: var(--gold-dark);
 
       font-size: 12px;
-
       font-weight: 900;
 
       letter-spacing: .13em;
@@ -521,9 +514,7 @@
     .section-head {
       display: flex;
 
-      justify-content:
-        space-between;
-
+      justify-content: space-between;
       align-items: flex-end;
 
       gap: 30px;
@@ -538,7 +529,6 @@
       color: var(--gold-dark);
 
       font-size: 12px;
-
       font-weight: 900;
 
       letter-spacing: .16em;
@@ -601,8 +591,7 @@
 
       display: flex;
 
-      justify-content:
-        space-between;
+      justify-content: space-between;
 
       gap: 20px;
 
@@ -612,7 +601,6 @@
 
     .market-live {
       display: inline-flex;
-
       align-items: center;
 
       gap: 7px;
@@ -624,8 +612,7 @@
 
       border-radius: 999px;
 
-      background:
-        var(--gold-light);
+      background: var(--gold-light);
 
       color: #35280e;
 
@@ -640,8 +627,7 @@
 
       border-radius: 50%;
 
-      background:
-        #e54337;
+      background: #e54337;
     }
 
 
@@ -729,7 +715,6 @@
       display: block;
 
       font-size: 20px;
-
       font-weight: 900;
     }
 
@@ -821,7 +806,6 @@
 
     .price-money {
       font-size: 22px;
-
       font-weight: 950;
 
       white-space: nowrap;
@@ -899,10 +883,7 @@
         20px 22px;
 
       display: flex;
-
-      justify-content:
-        space-between;
-
+      justify-content: space-between;
       align-items: center;
 
       border-bottom:
@@ -921,7 +902,6 @@
       color: var(--gold-dark);
 
       font-size: 11px;
-
       font-weight: 900;
     }
 
@@ -957,8 +937,7 @@
     .quick-card {
       padding: 30px;
 
-      border-radius:
-        var(--radius);
+      border-radius: var(--radius);
 
       border:
         1px solid var(--line);
@@ -1064,8 +1043,8 @@
 
       display: flex;
 
-      justify-content:
-        space-between;
+      justify-content: space-between;
+      align-items: center;
 
       gap: 20px;
 
@@ -1085,11 +1064,15 @@
         rgba(255,255,255,.65);
 
       font-size: 12px;
+
+      flex-shrink: 0;
     }
 
 
     .quick-stat strong {
-      font-size: 14px;
+      font-size: 13px;
+
+      text-align: right;
     }
 
 
@@ -1189,7 +1172,6 @@
       color: #e6c77f;
 
       font-size: 11px;
-
       font-weight: 900;
 
       letter-spacing: .12em;
@@ -1230,7 +1212,8 @@
 
 
     .process-card {
-      padding: 26px 23px;
+      padding:
+        26px 23px;
 
       border-radius: 23px;
 
@@ -1246,7 +1229,6 @@
       height: 42px;
 
       display: grid;
-
       place-items: center;
 
       margin-bottom: 18px;
@@ -1377,254 +1359,251 @@
       position: relative;
       z-index: 2;
     }
-<!-- =========================
-     SPECIAL GOLD GIFTS
-========================= -->
 
-<section
-  id="gift"
-  class="gift-section"
->
 
-  <div class="container">
+    /* ===================================
+       SPECIAL GOLD GIFTS
+    =================================== */
 
+    .gift-section {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.25) 0%,
+          rgba(242,234,220,.62) 100%
+        );
+    }
 
-    <div class="gift-intro">
 
+    .gift-intro {
+      display: flex;
 
-      <div class="section-title">
+      justify-content: space-between;
+      align-items: flex-end;
 
-        <div class="eyebrow">
-          SPECIAL GOLD GIFT
-        </div>
+      gap: 30px;
 
-        <h2>
-          특별한 날,<br>
-          오래 남는 금 선물
-        </h2>
+      margin-bottom: 30px;
+    }
 
-        <p>
-          마음을 전하고 싶은 순간,
-          의미를 오래 간직할 수 있는
-          특별한 금 선물을 준비해보세요.
-        </p>
 
-      </div>
+    .gift-title {
+      max-width: 630px;
+    }
 
 
-      <div class="gift-note">
-        감사 · 합격 · 취업 · 입학 · 생일 · 기념일 · 아이 선물 등
-        다양한 순금 제품을 상담 및 주문하실 수 있습니다.
-      </div>
+    .gift-title h2 {
+      color: var(--navy);
 
+      font-size:
+        clamp(32px,4vw,47px);
 
-    </div>
+      line-height: 1.17;
 
+      letter-spacing: -.045em;
 
+      margin-bottom: 10px;
+    }
 
-    <div class="gift-grid">
 
+    .gift-title p {
+      color: var(--muted);
 
-      <!-- 감사 선물 -->
+      font-size: 15px;
+    }
 
-      <article class="gift-card">
 
-        <div class="gift-image">
+    .gift-note {
+      max-width: 430px;
 
-          <img
-            src="images/gift-carnation.png"
-            alt="감사의 마음을 전하는 순금 선물"
-            loading="lazy"
-          >
+      text-align: right;
 
-          <span class="gift-tag">
-            THANK YOU
-          </span>
+      color: var(--muted);
 
-        </div>
+      font-size: 13px;
+    }
 
 
-        <div class="gift-content">
+    .gift-grid {
+      display: grid;
 
-          <h3>
-            감사의 마음
-          </h3>
+      grid-template-columns:
+        repeat(4,1fr);
 
-          <p>
-            부모님, 선생님 그리고 고마운 분께
-            마음을 전하는 특별한 순금 선물.
-          </p>
+      gap: 17px;
+    }
 
-        </div>
 
-      </article>
+    .gift-card {
+      overflow: hidden;
 
+      border-radius: 24px;
 
+      border:
+        1px solid var(--line);
 
-      <!-- 합격 선물 -->
+      background: white;
 
-      <article class="gift-card">
+      box-shadow:
+        0 12px 32px
+        rgba(73,54,31,.07);
 
-        <div class="gift-image">
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
 
-          <img
-            src="images/gift-ginseng.png"
-            alt="합격과 성공을 기원하는 순금 선물"
-            loading="lazy"
-          >
 
-          <span class="gift-tag">
-            SUCCESS
-          </span>
+    .gift-card:hover {
+      transform:
+        translateY(-5px);
 
-        </div>
+      box-shadow:
+        0 20px 42px
+        rgba(73,54,31,.12);
+    }
 
 
-        <div class="gift-content">
+    .gift-image {
+      position: relative;
 
-          <h3>
-            합격 · 성공 기원
-          </h3>
+      aspect-ratio: 4 / 5;
 
-          <p>
-            시험, 취업, 승진처럼 새로운 시작을
-            응원하는 의미 있는 금 선물.
-          </p>
+      overflow: hidden;
 
-        </div>
+      background: #eee7d9;
+    }
 
-      </article>
 
+    .gift-image img {
+      width: 100%;
+      height: 100%;
 
+      object-fit: cover;
 
-      <!-- 행운 선물 -->
+      transition:
+        transform .5s ease;
+    }
 
-      <article class="gift-card">
 
-        <div class="gift-image">
+    .gift-card:hover .gift-image img {
+      transform:
+        scale(1.025);
+    }
 
-          <img
-            src="images/gift-lucky.png"
-            alt="행운과 복을 기원하는 순금 선물"
-            loading="lazy"
-          >
 
-          <span class="gift-tag">
-            GOOD LUCK
-          </span>
+    .gift-tag {
+      position: absolute;
 
-        </div>
+      left: 14px;
+      top: 14px;
 
+      padding:
+        6px 11px;
 
-        <div class="gift-content">
+      border-radius: 999px;
 
-          <h3>
-            행운 · 기념 선물
-          </h3>
+      background:
+        rgba(255,253,248,.92);
 
-          <p>
-            좋은 일이 가득하길 바라는 마음을
-            작은 순금에 담아 선물해보세요.
-          </p>
+      color: var(--gold-dark);
 
-        </div>
+      backdrop-filter:
+        blur(8px);
 
-      </article>
+      font-size: 10px;
+      font-weight: 900;
 
+      letter-spacing: .06em;
+    }
 
 
-      <!-- 아이 선물 -->
+    .gift-content {
+      padding:
+        21px 20px 23px;
+    }
 
-      <article class="gift-card">
 
-        <div class="gift-image">
+    .gift-content h3 {
+      margin-bottom: 7px;
 
-          <img
-            src="images/gift-baby.png"
-            alt="아이를 위한 금 포인트 선물"
-            loading="lazy"
-          >
+      color: var(--navy);
 
-          <span class="gift-tag">
-            FOR KIDS
-          </span>
+      font-size: 19px;
 
-        </div>
+      letter-spacing: -.025em;
+    }
 
 
-        <div class="gift-content">
+    .gift-content p {
+      color: var(--muted);
 
-          <h3>
-            아이를 위한 선물
-          </h3>
+      font-size: 13px;
+    }
 
-          <p>
-            아이의 건강과 행복을 기원하며
-            오래 간직할 수 있는 특별한 선물.
-          </p>
 
-        </div>
+    .gift-bottom {
+      margin-top: 22px;
 
-      </article>
+      padding:
+        27px 30px;
 
+      display: flex;
 
-    </div>
+      justify-content: space-between;
+      align-items: center;
 
+      gap: 25px;
 
+      border-radius: 24px;
 
-    <div class="gift-bottom">
+      border:
+        1px solid
+        rgba(178,138,74,.20);
 
+      background:
+        rgba(255,255,255,.78);
+    }
 
-      <div>
 
-        <strong>
-          찾으시는 디자인이 따로 있으신가요?
-        </strong>
+    .gift-bottom strong {
+      display: block;
 
-        <p>
-          매장에 모든 제품을 보유하고 있지 않아도 괜찮습니다.
-          다양한 디자인을 확인하신 후 주문 상담이 가능합니다.
-          가격은 당일 금시세와 제품에 따라 달라질 수 있습니다.
-        </p>
+      margin-bottom: 5px;
 
-      </div>
+      color: var(--navy);
 
+      font-size: 18px;
+    }
 
 
-      <div class="buttons">
+    .gift-bottom p {
+      max-width: 660px;
 
-        <a
-          class="btn btn-primary"
-          href="https://open.kakao.com/o/sTK6ElFi"
-          target="_blank"
-          rel="noopener"
-        >
-          카카오톡 제품 문의
-        </a>
+      color: var(--muted);
 
-        <a
-          class="btn btn-secondary"
-          href="tel:0444176980"
-        >
-          전화 주문 상담
-        </a>
+      font-size: 13px;
+    }
 
-      </div>
 
+    .gift-actions {
+      display: flex;
+      flex-wrap: wrap;
 
-    </div>
+      gap: 8px;
 
+      flex-shrink: 0;
+    }
 
-    <div class="gift-ai-note">
-      ※ 위 이미지는 제품 이해를 돕기 위해 AI를 활용해 연출한 이미지이며,
-      실제 판매 제품의 디자인, 색상, 구성 등과 차이가 있을 수 있습니다.
-      실제 주문 가능 제품 및 가격은 상담 시 안내해드립니다.
-    </div>
 
+    .gift-ai-note {
+      margin-top: 13px;
 
-  </div>
+      color: #91887d;
 
-</section>
+      font-size: 11px;
+    }
+
 
     /* ===================================
        LOCATION
@@ -1667,7 +1646,6 @@
       color: var(--gold-dark);
 
       font-size: 19px;
-
       font-weight: 900;
     }
 
@@ -1700,7 +1678,6 @@
       height: 27px;
 
       display: grid;
-
       place-items: center;
 
       border-radius: 50%;
@@ -1715,7 +1692,6 @@
       display: flex;
 
       flex-direction: column;
-
       justify-content: center;
 
       color: white;
@@ -1761,8 +1737,7 @@
       color:
         rgba(255,255,255,.68);
 
-      background:
-        var(--navy3);
+      background: var(--navy3);
     }
 
 
@@ -1884,7 +1859,7 @@
 
 
     /* ===================================
-       MOBILE
+       TABLET
     =================================== */
 
     @media(max-width:980px) {
@@ -1893,42 +1868,85 @@
         display: none;
       }
 
+
       .header-contact .btn-light {
         display: none;
       }
+
 
       .hero-shell {
         grid-template-columns: 1fr;
       }
 
+
       .hero-visual {
         min-height: 330px;
       }
+
 
       .dashboard {
         grid-template-columns: 1fr;
       }
 
+
       .market-check {
         grid-template-columns: 1fr;
       }
+
 
       .service-grid {
         grid-template-columns:
           1fr 1fr;
       }
 
+
       .service-card.large {
-        grid-column: span 2;
+        grid-column:
+          span 2;
       }
+
 
       .process-grid {
         grid-template-columns:
           1fr 1fr;
       }
 
+
+      .gift-grid {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+
+      .gift-intro {
+        display: block;
+      }
+
+
+      .gift-note {
+        max-width: none;
+
+        margin-top: 12px;
+
+        text-align: left;
+      }
+
+
+      .gift-bottom {
+        display: block;
+      }
+
+
+      .gift-actions {
+        margin-top: 18px;
+      }
+
     }
 
+
+    /* ===================================
+       MOBILE
+    =================================== */
 
     @media(max-width:680px) {
 
@@ -2102,6 +2120,16 @@
       }
 
 
+      .quick-stat {
+        align-items: flex-start;
+      }
+
+
+      .quick-stat strong {
+        font-size: 12px;
+      }
+
+
       .service-grid {
         grid-template-columns: 1fr;
       }
@@ -2125,6 +2153,62 @@
           30px 23px;
 
         grid-template-columns: 1fr;
+      }
+
+
+      .gift-grid {
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap: 10px;
+      }
+
+
+      .gift-card {
+        border-radius: 18px;
+      }
+
+
+      .gift-content {
+        padding:
+          15px 13px 17px;
+      }
+
+
+      .gift-content h3 {
+        font-size: 16px;
+      }
+
+
+      .gift-content p {
+        font-size: 11px;
+      }
+
+
+      .gift-tag {
+        left: 9px;
+        top: 9px;
+
+        padding:
+          5px 8px;
+
+        font-size: 8px;
+      }
+
+
+      .gift-bottom {
+        padding:
+          22px 18px;
+      }
+
+
+      .gift-actions {
+        display: grid;
+      }
+
+
+      .gift-actions .btn {
+        width: 100%;
       }
 
 
@@ -2195,6 +2279,7 @@
 
   <div class="container header-inner">
 
+
     <a
       href="#top"
       class="brand"
@@ -2233,6 +2318,10 @@
         매입 품목
       </a>
 
+      <a href="#gift">
+        금 선물
+      </a>
+
       <a href="#process">
         거래 안내
       </a>
@@ -2250,6 +2339,7 @@
         class="btn btn-light"
         href="https://open.kakao.com/o/sTK6ElFi"
         target="_blank"
+        rel="noopener"
       >
         카카오 상담
       </a>
@@ -2262,6 +2352,7 @@
       </a>
 
     </div>
+
 
   </div>
 
@@ -2314,6 +2405,7 @@
             class="btn btn-light"
             href="https://naver.me/5JqeQaQX"
             target="_blank"
+            rel="noopener"
           >
             매장 위치 확인
           </a>
@@ -2378,7 +2470,7 @@
       </div>
 
       <p>
-        고객용 매입·판매 시세는 매일 고정 공지하며,
+        고객용 매입·판매 시세는 당일 기준으로 안내하며,
         국제 금시세와 원달러 환율은 별도로 실시간 표시합니다.
       </p>
 
@@ -2406,7 +2498,7 @@
           </div>
 
           <div class="market-date">
-            2026.09.03 · 24K 3.75g 기준
+            2026.09.04 · 24K 3.75g 기준
           </div>
 
         </div>
@@ -2654,7 +2746,8 @@
 
       <div class="market-note">
 
-        ※ 금·은 시세는 시장 상황에 따라 변동될 수 있으며,
+        ※ 치금 · 금니 · 은수저 · 백금 등 기타 품목은 별도 문의해 주세요.<br>
+        ※ 금·은 시세는 실시간으로 변동되며,
         제품 종류·함량·중량·상태에 따라 실제 거래가는 달라질 수 있습니다.
         최종 거래 전 금센티브에서 현재 시세를 다시 확인해 주세요.
 
@@ -2693,8 +2786,8 @@
       </div>
 
       <p>
-        국제 금 가격의 흐름은 실시간 차트를 통해
-        확인하실 수 있습니다.
+        국제 금 가격의 현재 흐름을
+        실시간 차트를 통해 확인하실 수 있습니다.
       </p>
 
     </div>
@@ -2717,6 +2810,7 @@
           </span>
 
         </div>
+
 
         <div class="chart-wrap">
 
@@ -2771,13 +2865,10 @@
         </div>
 
 
-        <div
-          style="
-            padding:27px;
-          "
-        >
+        <div style="padding:27px;">
 
           <div class="news-list">
+
 
             <div class="news-item">
 
@@ -2815,7 +2906,7 @@
 
               <p>
                 국제시세를 단순 환산한 가격과
-                실제 국내 금거래소 시세는 차이가 발생할 수 있습니다.
+                실제 국내 금거래소 시세에는 차이가 발생할 수 있습니다.
               </p>
 
             </div>
@@ -2824,15 +2915,16 @@
             <div class="news-item">
 
               <strong>
-                매입 전 시세 확인
+                거래 전 시세 확인
               </strong>
 
               <p>
-                금센티브 고객용 시세는 매일 공지하며
-                최종 거래 시점에 현재 가격을 다시 안내합니다.
+                금센티브 고객용 시세는 당일 기준으로 안내하며
+                최종 거래 시점에 가격을 다시 확인해드립니다.
               </p>
 
             </div>
+
 
           </div>
 
@@ -2850,7 +2942,7 @@
 
 
 <!-- ===================================
-     MARKET GUIDE
+     GOLD INFORMATION
 =================================== -->
 
 <section>
@@ -2925,7 +3017,8 @@
 
       <div class="quick-card">
 
-        <div class="section-kicker"
+        <div
+          class="section-kicker"
           style="color:#e0c17b;"
         >
           GUMCENTIVE
@@ -2944,6 +3037,7 @@
 
         <div class="quick-stats">
 
+
           <div class="quick-stat">
 
             <span>
@@ -2951,7 +3045,8 @@
             </span>
 
             <strong>
-              세종 산울동
+              세종시 산울7로 11<br>
+              712동 상가입구 1층 E-115호
             </strong>
 
           </div>
@@ -3179,6 +3274,248 @@
 
 
 <!-- ===================================
+     SPECIAL GOLD GIFTS
+=================================== -->
+
+<section
+  id="gift"
+  class="gift-section"
+>
+
+  <div class="container">
+
+
+    <div class="gift-intro">
+
+
+      <div class="gift-title">
+
+        <div class="section-kicker">
+          SPECIAL GOLD GIFT
+        </div>
+
+        <h2>
+          특별한 날,<br>
+          오래 남는 금 선물
+        </h2>
+
+        <p>
+          마음을 전하고 싶은 순간,
+          의미를 오래 간직할 수 있는
+          특별한 금 선물을 준비해보세요.
+        </p>
+
+      </div>
+
+
+      <div class="gift-note">
+        감사 · 합격 · 취업 · 입학 · 생일 · 기념일 · 아이 선물 등
+        다양한 순금 제품을 상담 및 주문하실 수 있습니다.
+      </div>
+
+
+    </div>
+
+
+
+    <div class="gift-grid">
+
+
+      <article class="gift-card">
+
+        <div class="gift-image">
+
+          <img
+            src="images/gift-carnation.png"
+            alt="감사의 마음을 전하는 순금 선물"
+            loading="lazy"
+          >
+
+          <span class="gift-tag">
+            THANK YOU
+          </span>
+
+        </div>
+
+
+        <div class="gift-content">
+
+          <h3>
+            감사의 마음
+          </h3>
+
+          <p>
+            부모님, 선생님 그리고 고마운 분께
+            마음을 전하는 특별한 순금 선물.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="gift-card">
+
+        <div class="gift-image">
+
+          <img
+            src="images/gift-ginseng.png"
+            alt="합격과 성공을 기원하는 순금 선물"
+            loading="lazy"
+          >
+
+          <span class="gift-tag">
+            SUCCESS
+          </span>
+
+        </div>
+
+
+        <div class="gift-content">
+
+          <h3>
+            합격 · 성공 기원
+          </h3>
+
+          <p>
+            시험, 취업, 승진처럼 새로운 시작을
+            응원하는 의미 있는 금 선물.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="gift-card">
+
+        <div class="gift-image">
+
+          <img
+            src="images/gift-lucky.png"
+            alt="행운과 복을 기원하는 순금 선물"
+            loading="lazy"
+          >
+
+          <span class="gift-tag">
+            GOOD LUCK
+          </span>
+
+        </div>
+
+
+        <div class="gift-content">
+
+          <h3>
+            행운 · 기념 선물
+          </h3>
+
+          <p>
+            좋은 일이 가득하길 바라는 마음을
+            작은 순금에 담아 선물해보세요.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="gift-card">
+
+        <div class="gift-image">
+
+          <img
+            src="images/gift-baby.png"
+            alt="아이를 위한 순금 선물"
+            loading="lazy"
+          >
+
+          <span class="gift-tag">
+            SPECIAL GIFT
+          </span>
+
+        </div>
+
+
+        <div class="gift-content">
+
+          <h3>
+            소중한 사람을 위한 선물
+          </h3>
+
+          <p>
+            생일과 기념일처럼 특별한 순간을
+            오래 기억할 수 있는 금 선물.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+
+    <div class="gift-bottom">
+
+
+      <div>
+
+        <strong>
+          찾으시는 디자인이 따로 있으신가요?
+        </strong>
+
+        <p>
+          매장에 모든 제품을 보유하고 있지 않아도 괜찮습니다.
+          다양한 디자인을 확인하신 후 주문 상담이 가능하며,
+          가격은 당일 금시세와 제품 구성에 따라 달라질 수 있습니다.
+        </p>
+
+      </div>
+
+
+      <div class="gift-actions">
+
+        <a
+          class="btn btn-navy"
+          href="https://open.kakao.com/o/sTK6ElFi"
+          target="_blank"
+          rel="noopener"
+        >
+          카카오톡 제품 문의
+        </a>
+
+        <a
+          class="btn btn-light"
+          href="tel:0444176980"
+        >
+          전화 주문 상담
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="gift-ai-note">
+      ※ 위 이미지는 제품 이해를 돕기 위해 AI를 활용해 연출한 이미지이며,
+      실제 판매 제품의 디자인, 색상, 구성 등과 차이가 있을 수 있습니다.
+      실제 주문 가능 제품 및 가격은 상담 시 안내해드립니다.
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ===================================
      PROCESS
 =================================== -->
 
@@ -3331,6 +3668,7 @@
         class="btn btn-light"
         href="https://open.kakao.com/o/sTK6ElFi"
         target="_blank"
+        rel="noopener"
       >
         혜택 문의하기
       </a>
@@ -3381,8 +3719,8 @@
         </h3>
 
         <div class="location-address">
-          세종시 산울7로 11,
-          712동 1층 E-115호
+          세종시 산울7로 11,<br>
+          712동 상가입구 1층 E-115호
         </div>
 
 
@@ -3394,7 +3732,7 @@
             <b>1</b>
 
             <span>
-              산울7단지 상가 주차장으로 들어와 주세요.
+              712동 상가입구 주차장으로 들어와 주세요.
             </span>
 
           </div>
@@ -3405,8 +3743,8 @@
             <b>2</b>
 
             <span>
-              712동 앞에 주차 후 엘리베이터를 이용해
-              1층으로 이동합니다.
+              712동 상가입구 앞에 주차 후
+              엘리베이터를 이용해 1층으로 이동합니다.
             </span>
 
           </div>
@@ -3452,6 +3790,7 @@
             class="btn btn-navy"
             href="https://naver.me/5JqeQaQX"
             target="_blank"
+            rel="noopener"
           >
             네이버 지도
           </a>
@@ -3460,11 +3799,13 @@
             class="btn btn-light"
             href="https://youtube.com/shorts/aBbcXD168M8?si=4FcqOVWr9ndMyN5z"
             target="_blank"
+            rel="noopener"
           >
             영상 길안내
           </a>
 
         </div>
+
 
       </div>
 
@@ -3472,7 +3813,8 @@
 
       <div class="location-card contact-card">
 
-        <div class="section-kicker"
+        <div
+          class="section-kicker"
           style="color:#f1d899;"
         >
           CONTACT
@@ -3544,7 +3886,7 @@
       </a>
 
       <a>
-        712동 1층 E-115호
+        712동 상가입구 1층 E-115호
       </a>
 
       <a href="tel:0444176980">
@@ -3564,9 +3906,14 @@
         오늘의 금시세
       </a>
 
+      <a href="#gift">
+        특별한 금 선물
+      </a>
+
       <a
         href="https://naver.me/5JqeQaQX"
         target="_blank"
+        rel="noopener"
       >
         네이버 지도
       </a>
@@ -3574,6 +3921,7 @@
       <a
         href="https://open.kakao.com/o/sTK6ElFi"
         target="_blank"
+        rel="noopener"
       >
         카카오톡 상담
       </a>
@@ -3587,6 +3935,7 @@
   <div class="container footer-bottom">
 
     © GUMCENTIVE.
+    세종시 산울7로 11, 712동 상가입구 1층 E-115호 ·
     금·은 시세는 시장 상황에 따라 변동될 수 있으며
     실제 거래 가격은 제품 상태와 함량 등에 따라 달라질 수 있습니다.
 
@@ -3613,6 +3962,7 @@
     class="float-kakao"
     href="https://open.kakao.com/o/sTK6ElFi"
     target="_blank"
+    rel="noopener"
   >
     카톡 상담
   </a>
@@ -3624,8 +3974,8 @@
 <script>
 
 /* ===================================
-   오늘 고객용 시세는 HTML에 고정되어 있음.
-   아래 코드는 국제 금시세/환율만 담당합니다.
+   고객용 시세는 HTML에 고정.
+   아래 코드는 국제 금시세/환율만 담당.
 =================================== */
 
 
@@ -3671,7 +4021,7 @@ function won(value) {
 
 
 /* ===================================
-   국제 시세만 업데이트
+   국제 시세 업데이트
 =================================== */
 
 async function updateInternationalMarket() {

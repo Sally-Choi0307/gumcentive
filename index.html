@@ -2263,7 +2263,520 @@
 
     }
 
-  </style>
+  
+
+    /* ===================================
+       NEW TODAY PRICE
+       gp- prefix : 기존 CSS와 충돌 방지
+    =================================== */
+
+    .gp-shell {
+      overflow: hidden;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--navy3), var(--navy));
+      box-shadow: 0 25px 60px rgba(10,28,48,.18);
+    }
+
+    .gp-top {
+      padding: 28px 30px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      color: white;
+    }
+
+    .gp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 9px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--gold-light);
+      color: #35280e;
+      font-size: 11px;
+      font-weight: 950;
+    }
+
+    .gp-badge i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e54337;
+    }
+
+    .gp-top h3 {
+      font-size: 27px;
+      font-weight: 950;
+      letter-spacing: -.025em;
+    }
+
+    .gp-top p {
+      margin-top: 4px;
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+    }
+
+    .gp-live-info {
+      text-align: right;
+      color: rgba(255,255,255,.6);
+      font-size: 12px;
+    }
+
+    .gp-live-info strong {
+      display: block;
+      margin-top: 4px;
+      color: white;
+      font-size: 13px;
+    }
+
+    .gp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 0 30px 30px;
+    }
+
+    .gp-card {
+      overflow: hidden;
+      background: #fffdf9;
+      border-radius: 22px;
+      border: 1px solid rgba(178,138,74,.22);
+      box-shadow: 0 12px 35px rgba(0,0,0,.12);
+    }
+
+    .gp-buy-card {
+      border-bottom: 4px solid #e9565d;
+    }
+
+    .gp-sell-card {
+      border-bottom: 4px solid #3494d6;
+    }
+
+    .gp-card-head {
+      padding: 23px 24px 18px;
+      text-align: center;
+      border-bottom: 1px solid #ece5da;
+    }
+
+    .gp-card-head > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .gp-live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22a96d;
+      box-shadow: 0 0 0 4px rgba(34,169,109,.10);
+    }
+
+    .gp-live-text {
+      color: #388f6b;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .gp-card-head h3 {
+      margin-top: 5px;
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: -.04em;
+    }
+
+    .gp-card-head p {
+      margin-top: 3px;
+      color: #999187;
+      font-size: 11px;
+    }
+
+    .gp-main-price {
+      margin: 16px 18px 12px;
+      padding: 22px 18px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .gp-buy-main {
+      background: #fff4f2;
+      border: 1px solid #f1d2ce;
+    }
+
+    .gp-sell-main {
+      background: #f1f7fc;
+      border: 1px solid #cedfed;
+    }
+
+    .gp-main-price span {
+      display: block;
+      margin-bottom: 4px;
+      color: #777067;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .gp-main-price strong {
+      display: block;
+      line-height: 1.08;
+      font-size: clamp(34px,3.6vw,48px);
+      letter-spacing: -.045em;
+    }
+
+    .gp-buy-main strong {
+      color: #e34d55;
+    }
+
+    .gp-sell-main strong {
+      color: #2d8fd0;
+    }
+
+    .gp-main-price strong small {
+      margin-left: 2px;
+      font-size: .48em;
+    }
+
+    .gp-main-price em {
+      display: block;
+      margin-top: 6px;
+      color: #9a9288;
+      font-size: 11px;
+      font-style: normal;
+    }
+
+    .gp-table {
+      margin: 0 18px;
+      overflow: hidden;
+      border: 1px solid #e9e2d7;
+      border-radius: 14px;
+      background: white;
+    }
+
+    .gp-row {
+      min-height: 66px;
+      display: grid;
+      grid-template-columns: 1.3fr .8fr 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee8df;
+    }
+
+    .gp-row:last-child {
+      border-bottom: 0;
+    }
+
+    .gp-row > div {
+      min-width: 0;
+    }
+
+    .gp-row strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.3;
+      word-break: keep-all;
+    }
+
+    .gp-row small {
+      display: block;
+      margin-top: 3px;
+      color: #a39b91;
+      font-size: 10px;
+    }
+
+    .gp-row b {
+      white-space: nowrap;
+      text-align: right;
+      color: #29231d;
+      font-size: 15px;
+      letter-spacing: -.025em;
+    }
+
+    .gp-table-head {
+      min-height: 43px;
+      background: #f5efe4;
+      color: #766957;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .gp-table-head span:not(:first-child) {
+      text-align: right;
+    }
+
+    .gp-total {
+      color: var(--gold-dark) !important;
+    }
+
+    .gp-highlight-row {
+      background: #fff8e7;
+      box-shadow: inset 3px 0 0 var(--gold);
+    }
+
+    .gp-highlight-row strong,
+    .gp-highlight-row b {
+      color: #8d6427;
+    }
+
+    .gp-silver-row {
+      background: #faf9f6;
+    }
+
+    .gp-span-2 {
+      grid-column: 2 / 4;
+      color: var(--gold-dark) !important;
+    }
+
+    .gp-sell-table .gp-row {
+      grid-template-columns: 1fr auto;
+    }
+
+    .gp-sell-head {
+      grid-template-columns: 1fr auto !important;
+    }
+
+    .gp-sell-price {
+      font-size: 17px !important;
+      color: #17283d !important;
+    }
+
+    .gp-inquiry {
+      color: #797167 !important;
+    }
+
+    .gp-note {
+      min-height: 63px;
+      margin: 15px 20px 21px;
+      color: #81796f;
+      font-size: 10px;
+      line-height: 1.7;
+    }
+
+    .gp-bottom {
+      margin: 0 30px 30px;
+      padding: 21px 23px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid rgba(215,186,120,.24);
+      border-radius: 17px;
+      background: rgba(255,255,255,.065);
+      color: white;
+    }
+
+    .gp-bottom > div:first-child strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .gp-bottom > div:first-child p {
+      margin-top: 4px;
+      color: rgba(255,255,255,.58);
+      font-size: 11px;
+    }
+
+    .gp-actions {
+      display: flex;
+      align-items: stretch;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .gp-call,
+    .gp-kakao {
+      min-height: 51px;
+      padding: 8px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      text-align: center;
+      transition: .2s ease;
+    }
+
+    .gp-call {
+      flex-direction: column;
+      border: 1px solid var(--gold);
+      color: white;
+    }
+
+    .gp-call span {
+      color: #d8c399;
+      font-size: 9px;
+    }
+
+    .gp-call strong {
+      margin-top: 1px;
+      font-size: 15px;
+    }
+
+    .gp-kakao {
+      background: #fee500;
+      color: #191919;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .gp-call:hover,
+    .gp-kakao:hover {
+      transform: translateY(-2px);
+    }
+
+    @media(max-width:980px) {
+      .gp-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:680px) {
+
+      .gp-shell {
+        border-radius: 22px;
+      }
+
+      .gp-top {
+        display: block;
+        padding: 21px 16px 17px;
+      }
+
+      .gp-top h3 {
+        font-size: 22px;
+      }
+
+      .gp-live-info {
+        margin-top: 10px;
+        text-align: left;
+      }
+
+      .gp-grid {
+        gap: 14px;
+        padding: 0 12px 14px;
+      }
+
+      .gp-card {
+        border-radius: 17px;
+      }
+
+      .gp-card-head {
+        padding: 18px 14px 15px;
+      }
+
+      .gp-card-head h3 {
+        font-size: 22px;
+      }
+
+      .gp-main-price {
+        margin: 12px 12px 9px;
+        padding: 19px 12px;
+      }
+
+      .gp-main-price strong {
+        font-size: 36px;
+      }
+
+      .gp-table {
+        margin: 0 10px;
+      }
+
+      .gp-row {
+        min-height: 60px;
+        grid-template-columns: 1.15fr .8fr .95fr;
+        gap: 7px;
+        padding: 10px 8px;
+      }
+
+      .gp-row strong {
+        font-size: 12px;
+      }
+
+      .gp-row small {
+        font-size: 8px;
+      }
+
+      .gp-row b {
+        font-size: 12px;
+      }
+
+      .gp-table-head {
+        min-height: 38px;
+        font-size: 9px;
+      }
+
+      .gp-sell-price {
+        font-size: 14px !important;
+      }
+
+      .gp-note {
+        min-height: auto;
+        margin: 13px 13px 17px;
+        font-size: 9px;
+      }
+
+      .gp-bottom {
+        display: block;
+        margin: 0 12px 14px;
+        padding: 18px 15px;
+      }
+
+      .gp-actions {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gp-call,
+      .gp-kakao {
+        min-width: 0;
+      }
+
+    }
+
+    @media(max-width:390px) {
+
+      .gp-row {
+        grid-template-columns: 1.05fr .82fr 1fr;
+      }
+
+      .gp-row strong {
+        font-size: 11px;
+      }
+
+      .gp-row b {
+        font-size: 11px;
+      }
+
+      .gp-main-price strong {
+        font-size: 33px;
+      }
+
+    }
+
+
+
+    /* 국제 금시세 · 환율 카드 글씨색 */
+    .gp-shell .reference {
+      color: #ffffff;
+    }
+
+    .gp-shell .reference span {
+      color: rgba(255,255,255,.72);
+    }
+
+    .gp-shell .reference strong {
+      color: #ffffff;
+    }
+
+    .gp-shell .reference small {
+      color: rgba(255,255,255,.58);
+    }
+
+</style>
 </head>
 
 
@@ -2465,22 +2978,18 @@
 
 
 
+
 <!-- ===================================
      TODAY PRICE
 =================================== -->
 
-<section
-  class="market"
-  id="price"
->
+<section class="market" id="price">
 
   <div class="container">
-
 
     <div class="section-head">
 
       <div>
-
         <div class="section-kicker">
           TODAY'S GOLD PRICE
         </div>
@@ -2488,393 +2997,354 @@
         <h2>
           금센티브 오늘의 시세
         </h2>
-
       </div>
 
       <p>
-        고객용 매입·판매 시세는 당일 기준으로 안내하며,
-        국제 금시세와 원달러 환율은 별도로 실시간 표시합니다.
+        손님이 사실 때와 파실 때를 구분해
+        오늘의 금·은 시세를 한눈에 확인하실 수 있습니다.
       </p>
 
     </div>
 
 
+    <div class="gp-shell">
 
-    <div class="market-shell">
-
-
-      <div class="market-header">
+      <!-- 상단 날짜 -->
+      <div class="gp-top">
 
         <div>
-
-          <div class="market-live">
-
-            <span class="market-dot"></span>
-
+          <span class="gp-badge">
+            <i></i>
             TODAY PRICE
+          </span>
 
-          </div>
+          <h3>
+            <span id="priceTitleDate">9월 10일</span> 금센티브 시세
+          </h3>
 
-          <div class="market-title">
-            9월 9일 금센티브 시세
-          </div>
-
-          <div class="market-date">
-           2026.09.09 · 금·은 당일 시세 기준
-          </div>
-
+          <p>
+            <span id="priceFullDate">2026.09.10</span> · <span id="priceTime">10:33</span> 기준
+          </p>
         </div>
 
-
-        <div class="market-time">
-
-          국제시세 최종 갱신
-
+        <div class="gp-live-info">
+          국제 금시세 · 환율
           <strong id="updatedAt">
             확인 중
           </strong>
-
         </div>
 
       </div>
 
 
-
+      <!-- 국제 시세 요약 -->
       <div class="reference-grid">
 
-
         <div class="reference">
-
-          <span>
-            국제 금시세
-          </span>
-
-          <strong id="goldSpot">
-            확인 중
-          </strong>
-
-          <small>
-            USD / T.oz
-          </small>
-
+          <span>국제 금시세</span>
+          <strong id="goldSpot">확인 중</strong>
+          <small>USD / T.oz</small>
         </div>
 
-
         <div class="reference">
-
-          <span>
-            원달러 환율
-          </span>
-
-          <strong id="usdKrw">
-            확인 중
-          </strong>
-
-          <small>
-            KRW / USD
-          </small>
-
+          <span>원달러 환율</span>
+          <strong id="usdKrw">확인 중</strong>
+          <small>KRW / USD</small>
         </div>
 
-
         <div class="reference">
-
-          <span>
-            순금 원재료 환산가
-          </span>
-
-          <strong id="rawGold">
-            확인 중
-          </strong>
-
-          <small>
-            24K · 3.75g
-          </small>
-
+          <span>순금 원재료 환산가</span>
+          <strong id="rawGold">확인 중</strong>
+          <small>24K · 3.75g</small>
         </div>
+
+      </div>
+
+
+      <!-- 가격 카드 -->
+      <div class="gp-grid">
+
+
+        <!-- 손님이 사실 때 -->
+        <article class="gp-card gp-buy-card">
+
+          <div class="gp-card-head">
+
+            <div>
+              <span class="gp-live-dot"></span>
+              <span class="gp-live-text">최신 시세</span>
+            </div>
+
+            <h3>
+              손님이 사실 때
+            </h3>
+
+            <p>
+              골드바 · VAT 별도
+            </p>
+
+          </div>
+
+
+          <div class="gp-main-price gp-buy-main">
+
+            <span>
+              GBK 골드바 1돈
+            </span>
+
+            <strong>
+              <span id="buyMain1">749,000</span><small>원</small>
+            </strong>
+
+            <em>
+              24K · 3.75g
+            </em>
+
+          </div>
+
+
+          <div class="gp-table">
+
+            <div class="gp-row gp-table-head">
+              <span>품목</span>
+              <span>1돈당</span>
+              <span>총 금액</span>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>GBK 골드바 1돈</strong>
+                <small>24K · 3.75g</small>
+              </div>
+
+              <b id="buy1Unit">749,000원</b>
+              <b class="gp-total" id="buy1Total">749,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>GBK 골드바 3돈</strong>
+                <small>24K · 11.25g</small>
+              </div>
+
+              <b id="buy3Unit">746,000원</b>
+              <b class="gp-total" id="buy3Total">2,238,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>GBK 골드바 5돈</strong>
+                <small>24K · 18.75g</small>
+              </div>
+
+              <b id="buy5Unit">744,000원</b>
+              <b class="gp-total" id="buy5Total">3,720,000원</b>
+            </div>
+
+
+            <div class="gp-row gp-highlight-row">
+              <div>
+                <strong>GBK 골드바 10돈</strong>
+                <small>24K · 37.5g</small>
+              </div>
+
+              <b id="buy10Unit">739,000원</b>
+              <b class="gp-total" id="buy10Total">7,390,000원</b>
+            </div>
+
+
+            <div class="gp-row gp-silver-row">
+              <div>
+                <strong>실버바 1kg</strong>
+                <small>999.9</small>
+              </div>
+
+              <b class="gp-span-2" id="silverBuy">
+                3,150,000원
+              </b>
+            </div>
+
+          </div>
+
+
+          <p class="gp-note">
+            ※ 골드바 가격은 1돈당 단가이며, 우측에는 해당 중량의 총 금액을 표시했습니다.<br>
+            ※ 구매 가격은 VAT 별도입니다.
+          </p>
+
+        </article>
+
+
+
+        <!-- 손님이 파실 때 -->
+        <article class="gp-card gp-sell-card">
+
+          <div class="gp-card-head">
+
+            <div>
+              <span class="gp-live-dot"></span>
+              <span class="gp-live-text">최신 시세</span>
+            </div>
+
+            <h3>
+              손님이 파실 때
+            </h3>
+
+            <p>
+              당일 금 매입 시세
+            </p>
+
+          </div>
+
+
+          <div class="gp-main-price gp-sell-main">
+
+            <span>
+              검인 골드바
+            </span>
+
+            <strong>
+              <span id="sellMain">725,000</span><small>원</small>
+            </strong>
+
+            <em>
+              1돈 · 3.75g 기준
+            </em>
+
+          </div>
+
+
+          <div class="gp-table gp-sell-table">
+
+            <div class="gp-row gp-table-head gp-sell-head">
+              <span>품목</span>
+              <span>매입 시세</span>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>검인 골드바</strong>
+                <small>24K · 3.75g</small>
+              </div>
+
+              <b class="gp-sell-price" id="sellGoldbar">725,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>3대 마크 순금 덩어리</strong>
+                <small>24K · 3.75g</small>
+              </div>
+
+              <b class="gp-sell-price" id="sellLump">720,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>24K 순금 반지 · 돌반지</strong>
+                <small>순금 제품</small>
+              </div>
+
+              <b class="gp-sell-price" id="sellRing">715,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>24K 순금 목걸이 · 팔찌</strong>
+                <small>순금 제품</small>
+              </div>
+
+              <b class="gp-sell-price" id="sellNecklace">710,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>18K 금시세</strong>
+                <small>제품별 적용</small>
+              </div>
+
+              <b class="gp-sell-price" id="sell18k">535,000원</b>
+            </div>
+
+
+            <div class="gp-row">
+              <div>
+                <strong>14K 금시세</strong>
+                <small>제품별 적용</small>
+              </div>
+
+              <b class="gp-sell-price" id="sell14k">415,000원</b>
+            </div>
+
+
+            <div class="gp-row gp-silver-row">
+              <div>
+                <strong>은 · 실버바</strong>
+                <small>제품별 확인</small>
+              </div>
+
+              <b class="gp-sell-price gp-inquiry">
+                별도문의
+              </b>
+            </div>
+
+          </div>
+
+
+          <p class="gp-note">
+            ※ 실제 매입가는 제품 함량·중량·상태에 따라 달라질 수 있습니다.<br>
+            ※ 치금·금니·은수저·백금 등 기타 품목은 별도 문의해 주세요.
+          </p>
+
+        </article>
 
 
       </div>
 
 
-
-<div class="price-table">
-
-  <!-- 제목 -->
-  <div class="price-head">
-
-    <div>
-      품목
-    </div>
-
-    <div>
-      내가 살 때<br>
-      VAT 별도
-    </div>
-
-    <div>
-      내가 팔 때
-    </div>
-
-  </div>
-
-
-  <!-- 검인 골드바 -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        검인 골드바 1돈
-      </strong>
-
-      <span>
-        24K · 3.75g
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-buy">
-        745,000원
-      </span>
-
-      <span class="price-sub">
-        VAT 별도
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        720,000원
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <!-- 3대 마크 순금 -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        3대 마크 순금 덩어리
-      </strong>
-
-      <span>
-        24K · 3.75g
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-buy">
-        740,000원
-      </span>
-
-      <span class="price-sub">
-        VAT 별도
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        715,000원
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <!-- 순금 반지 -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        24K 순금 반지·돌반지
-      </strong>
-
-      <span>
-        순금 제품
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money">
-        제품시세적용
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        710,000원
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <!-- 순금 목걸이 팔찌 -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        24K 순금 목걸이·팔찌
-      </strong>
-
-      <span>
-        순금 제품
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money">
-        제품시세적용
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        705,000원
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <!-- 18K -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        18K 금시세
-      </strong>
-
-      <span>
-        18K · 제품별 적용
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money">
-        제품시세적용
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        528,000원
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <!-- 14K -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        14K 금시세
-      </strong>
-
-      <span>
-        14K · 제품별 적용
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money">
-        제품시세적용
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        410,000원
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <!-- 은 -->
-  <div class="price-row">
-
-    <div class="price-kind">
-
-      <strong>
-        은시세 1kg
-      </strong>
-
-      <span>
-        실버바 기준
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-buy">
-        3,150,000원
-      </span>
-
-    </div>
-
-    <div>
-
-      <span class="price-money price-sell">
-        별도문의
-      </span>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div class="market-note">
-
-  ※ 당일 시세 기준이며 제품의 함량·상태에 따라 실제 매입가는 달라질 수 있습니다.<br>
-  ※ 방문 전 사진과 중량을 보내주시면 예상 금액을 안내해드립니다.<br>
-  ※ 치금 · 금니 · 은수저 · 백금 등 기타 품목은 별도 문의해 주세요.<br>
-  ※ 금·은 시세는 실시간으로 변동되며 최종 거래 전 현재 시세를 다시 확인해 주세요.
-
-</div>
+      <!-- 하단 CTA -->
+      <div class="gp-bottom">
+
+        <div>
+          <strong>
+            금 팔기 전, 현재 매입가부터 확인하세요.
+          </strong>
+
+          <p>
+            사진과 대략적인 중량을 보내주시면 예상 금액 상담이 가능합니다.
+          </p>
+        </div>
+
+        <div class="gp-actions">
+
+          <a
+            href="tel:0444176980"
+            class="gp-call"
+          >
+            <span>전화 시세 문의</span>
+            <strong>044-417-6980</strong>
+          </a>
+
+          <a
+            href="https://open.kakao.com/o/sTK6ElFi"
+            target="_blank"
+            rel="noopener"
+            class="gp-kakao"
+          >
+            카카오톡 문의
+          </a>
+
+        </div>
+
+      </div>
 
 
     </div>
@@ -2882,7 +3352,6 @@
   </div>
 
 </section>
-
 
 
 <!-- ===================================
@@ -4096,9 +4565,106 @@
 
 <script>
 
+
+/* =========================================================
+   ★★★★★ 매일 여기만 수정하세요 ★★★★★
+   숫자에는 쉼표(,) 없이 입력하세요.
+   ========================================================= */
+
+const DAILY_PRICE = {
+
+  // 날짜 / 시간
+  dateText: "9월 10일",
+  fullDate: "2026.09.10",
+  time: "10:33",
+
+  // 손님이 사실 때 - GBK 골드바 1돈당 판매가
+  buy1: 749000,
+  buy3: 746000,
+  buy5: 744000,
+  buy10: 739000,
+
+  // 손님이 파실 때 - 검인 골드바 기준 매입가
+  sellGoldbar: 725000,
+
+  // 18K / 14K는 매일 직접 수정
+  sell18k: 535000,
+  sell14k: 415000,
+
+  // 실버바 1kg 판매가
+  silverBuy: 3150000
+
+};
+
+/*
+  아래 24K 매입가는 sellGoldbar 기준으로 자동 계산됩니다.
+  3대 마크 순금 덩어리 = 골드바 - 5,000원
+  24K 반지·돌반지      = 골드바 - 10,000원
+  24K 목걸이·팔찌      = 골드바 - 15,000원
+
+  3돈 / 5돈 / 10돈의 총 금액도 자동 계산됩니다.
+*/
+
+
+function formatWon(value) {
+  return Math.round(Number(value)).toLocaleString("ko-KR") + "원";
+}
+
+
+function formatNumber(value) {
+  return Math.round(Number(value)).toLocaleString("ko-KR");
+}
+
+
+function updateDailyPrice() {
+
+  const sellLump = DAILY_PRICE.sellGoldbar - 5000;
+  const sellRing = DAILY_PRICE.sellGoldbar - 10000;
+  const sellNecklace = DAILY_PRICE.sellGoldbar - 15000;
+
+  // 날짜 / 시간
+  document.getElementById("priceTitleDate").textContent = DAILY_PRICE.dateText;
+  document.getElementById("priceFullDate").textContent = DAILY_PRICE.fullDate;
+  document.getElementById("priceTime").textContent = DAILY_PRICE.time;
+
+  // 살 때 - 메인 가격
+  document.getElementById("buyMain1").textContent = formatNumber(DAILY_PRICE.buy1);
+
+  // 살 때 - 1돈당 가격
+  document.getElementById("buy1Unit").textContent = formatWon(DAILY_PRICE.buy1);
+  document.getElementById("buy3Unit").textContent = formatWon(DAILY_PRICE.buy3);
+  document.getElementById("buy5Unit").textContent = formatWon(DAILY_PRICE.buy5);
+  document.getElementById("buy10Unit").textContent = formatWon(DAILY_PRICE.buy10);
+
+  // 살 때 - 총 금액 자동 계산
+  document.getElementById("buy1Total").textContent = formatWon(DAILY_PRICE.buy1);
+  document.getElementById("buy3Total").textContent = formatWon(DAILY_PRICE.buy3 * 3);
+  document.getElementById("buy5Total").textContent = formatWon(DAILY_PRICE.buy5 * 5);
+  document.getElementById("buy10Total").textContent = formatWon(DAILY_PRICE.buy10 * 10);
+
+  // 실버바
+  document.getElementById("silverBuy").textContent = formatWon(DAILY_PRICE.silverBuy);
+
+  // 팔 때 - 메인 가격
+  document.getElementById("sellMain").textContent = formatNumber(DAILY_PRICE.sellGoldbar);
+
+  // 팔 때 - 24K 자동 계산
+  document.getElementById("sellGoldbar").textContent = formatWon(DAILY_PRICE.sellGoldbar);
+  document.getElementById("sellLump").textContent = formatWon(sellLump);
+  document.getElementById("sellRing").textContent = formatWon(sellRing);
+  document.getElementById("sellNecklace").textContent = formatWon(sellNecklace);
+
+  // 팔 때 - 18K / 14K 직접 입력값
+  document.getElementById("sell18k").textContent = formatWon(DAILY_PRICE.sell18k);
+  document.getElementById("sell14k").textContent = formatWon(DAILY_PRICE.sell14k);
+}
+
+updateDailyPrice();
+
+
 /* ===================================
-   고객용 시세는 HTML에 고정.
-   아래 코드는 국제 금시세/환율만 담당.
+   고객용 시세는 DAILY_PRICE 설정값으로 표시.
+   아래 코드는 국제 금시세/환율을 자동 갱신.
 =================================== */
 
 

@@ -3059,7 +3059,7 @@
         </div>
 
         <div class="reference">
-          <span>원달러 환율</span>
+          <span>최근 원달러 환율</span>
           <strong id="usdKrw">확인 중</strong>
           <small>KRW / USD</small>
         </div>
@@ -4705,7 +4705,7 @@ const GOLD_API =
 
 
 const FX_API =
-  "https://www.currencyexchangetool.com/api/v1/convert?amount=1&from=USD&to=KRW";
+  "https://open.er-api.com/v6/latest/USD";
 
 
 
@@ -4796,7 +4796,7 @@ async function updateInternationalMarket() {
 
     const fx =
       Number(
-        fxData.rate
+        fxData.rates.KRW
       );
 
 

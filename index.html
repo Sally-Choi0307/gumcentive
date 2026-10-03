@@ -4576,25 +4576,25 @@ const DAILY_PRICE = {
 
   // 손님이 사실 때 - GBK 골드바
   // ★ 1돈 가격만 입력하면 3돈·5돈·10돈 자동 계산
-  buy1: 725000,
+  buy1: 720000,
 
   // 손님이 파실 때 - 검인 골드바 기준 매입가
-  sellGoldbar: 700000,
+  sellGoldbar: 690000,
 
   // 18K / 14K는 매일 직접 수정
-  sell18k: 521000,
-  sell14k: 406000,
+  sell18k: 510000,
+  sell14k: 400000,
 
   // 실버바 1kg 판매가
-  silverBuy: 2920000
+  silverBuy: 2900000
 
 };
 
 /*
   아래 24K 매입가는 sellGoldbar 기준으로 자동 계산됩니다.
   3대 마크 순금 덩어리 = 골드바 - 5,000원
-  24K 반지·돌반지      = 골드바 - 9,000원
-  24K 목걸이·팔찌      = 골드바 - 13,0000원
+  24K 반지·돌반지      = 골드바 - 10,000원
+  24K 목걸이·팔찌      = 골드바 - 15,0000원
 
   3돈 / 5돈 / 10돈의 총 금액도 자동 계산됩니다.
 */
@@ -4614,7 +4614,7 @@ function updateDailyPrice() {
 
   const sellLump = DAILY_PRICE.sellGoldbar - 5000;
   const sellRing = DAILY_PRICE.sellGoldbar - 10000;
-  const sellNecklace = DAILY_PRICE.sellGoldbar - 13000;
+  const sellNecklace = DAILY_PRICE.sellGoldbar - 15000;
 
   // 골드바 판매가 자동 계산
   const buy3 = DAILY_PRICE.buy1 - 3000;

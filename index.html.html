@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="세종 산울동 금센티브 금거래소. 순금 골드바, 18K, 14K, 은제품, 치금 매입과 순금 선물 상담." name="description"/>
+  <title>
+   금센티브 | 세종 금거래소
+  </title>
+  <!-- =========================================================
+     ★★★★★ 매일 여기만 수정하세요 ★★★★★
+     맨 위에 있어 모바일에서도 바로 수정할 수 있습니다.
+     숫자에는 쉼표를 넣지 마세요.
+     ========================================================= -->
+  <script>
+   const DAILY_PRICE = {
+
+  // 시세 적용일시: 날짜와 시간을 매일 직접 수정하세요 (한국시간)
+  asOf: '2026-10-21T10:00:00+09:00',
+
+  // 손님이 사실 때: 24K 순금 덩어리 1돈
+  buyLump: 692000,
+
+  // 손님이 파실 때: 검인 골드바 1돈
+  sellGoldbar: 673000,
+
+  // 손님이 파실 때: 18K 1돈
+  sell18k: 497000,
+
+  // 손님이 파실 때: 14K 1돈
+  sell14k: 386000,
+
+  // 손님이 사실 때: 실버바 1kg
+  silverBuy: 2670000
+
+};
+  </script>
+  <style>
+   :root {
+  --ivory:#f8f3e8;
+  --navy:#102744;
+  --navy3:#0b1c31;
+  --gold:#b28a4a;
+  --muted:#746e65;
+  --line:rgba(117,85,45,.16)}
+
+
+* {
+  box-sizing:border-box}
+
+html {
+  scroll-behavior:smooth}
+
+body {
+  margin:0;
+  background:linear-gradient(#fffdf9,var(--ivory));
+  color:#27231e;
+  font:15px/1.65 Pretendard,'Noto Sans KR','Apple SD Gothic Neo',Arial,sans-serif}
+
+a {
+  text-decoration:none;
+  color:inherit}
+
+img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover}
+
+.container {
+  width:min(1180px,calc(100% - 36px));
+  margin:auto}
+
+.topbar {
+  background:var(--navy3);
+  color:#fff;
+  font-size:12px;
+  padding:7px 0}
+
+.topbar .container {
+  display:flex;
+  justify-content:space-between}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#fffdf8f2;
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(15px)}
+
+.header-inner {
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:13px}
+
+.symbol {
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border:2px solid var(--gold);
+  border-radius:15px;
+  background:linear-gradient(135deg,#fff,#e9dbbd);
+  color:#75552d;
+  font-size:22px;
+  font-weight:900}
+
+.brand strong {
+  display:block;
+  color:var(--navy);
+  font-size:21px;
+  line-height:1.2}
+
+.brand small {
+  letter-spacing:.2em;
+  color:#75552d}
+
+.nav {
+  display:flex;
+  gap:19px;
+  font-size:13px;
+  font-weight:700}
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:10px 18px;
+  border-radius:99px;
+  font-weight:800;
+  font-size:13px;
+  text-align:center;
+  gap:6px}
+
+.navy {
+  background:var(--navy);
+  color:white}
+
+.light {
+  background:white;
+  border:1px solid var(--line);
+  color:var(--navy)}
+
+.gold {
+  background:var(--gold);
+  color:white}
+
+.hero {
+  padding:34px 0 24px}
+
+.hero-shell {
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  overflow:hidden;
+  border-radius:34px;
+  min-height:440px;
+  background:linear-gradient(120deg,#fffdf8,#f4ead7);
+  box-shadow:0 20px 55px #392c1b19}
+
+.hero-copy {
+  padding:55px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-direction:column}
+
+.kicker {
+  font-weight:900;
+  color:#75552d;
+  font-size:12px;
+  letter-spacing:.14em}
+
+.hero h1 {
+  font-size:clamp(38px,5.3vw,66px);
+  line-height:1.12;
+  letter-spacing:-.06em;
+  color:var(--navy);
+  margin:16px 0}
+
+.hero h1 span {
+  color:#75552d}
+
+.hero p {
+  font-size:17px;
+  color:var(--muted)}
+
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:15px}
+
+.hero-visual {
+  position:relative;
+  min-height:330px}
+
+.hero-stamp {
+  position:absolute;
+  bottom:22px;
+  right:22px;
+  background:#102744ed;
+  color:white;
+  border-radius:15px;
+  padding:12px 18px;
+  font-size:12px}
+
+.hero-stamp strong {
+  display:block;
+  font-size:16px}
+
+section {
+  padding:68px 0}
+
+.section-head {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:26px}
+
+.section-head h2 {
+  margin:8px 0 0;
+  color:var(--navy);
+  font-size:clamp(30px,4vw,44px);
+  letter-spacing:-.04em;
+  line-height:1.22}
+
+.section-head>p {
+  max-width:420px;
+  color:var(--muted);
+  font-size:14px}
+
+.gp-shell {
+  background:linear-gradient(130deg,var(--navy3),var(--navy));
+  border-radius:27px;
+  overflow:hidden;
+  box-shadow:0 25px 60px #0a1c302b}
+
+.gp-top {
+  display:flex;
+  align-items:start;
+  justify-content:space-between;
+  gap:20px;
+  padding:26px 30px;
+  color:#fff}
+
+.gp-top h3 {
+  margin:8px 0 1px;
+  font-size:27px}
+
+.gp-top p {
+  margin:0;
+  color:#ffffffa8;
+  font-size:13px}
+
+.gp-badge {
+  display:inline-block;
+  border-radius:30px;
+  padding:4px 11px;
+  background:#d7ba78;
+  color:#35280e;
+  font-weight:900;
+  font-size:11px}
+
+.gp-live-info {
+  text-align:right;
+  font-size:12px;
+  color:#ffffffa9}
+
+.gp-live-info strong {
+  display:block;
+  color:white;
+  font-size:13px}
+
+.reference-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin:0 30px 24px;
+  border-radius:16px;
+  overflow:hidden;
+  gap:1px;
+  background:#ffffff21}
+
+.reference {
+  padding:17px;
+  background:#ffffff0c;
+  color:white}
+
+.reference span,.reference small {
+  display:block;
+  color:#ffffffb7;
+  font-size:11px}
+
+.reference strong {
+  display:block;
+  font-size:21px;
+  line-height:1.5}
+
+.reference small {
+  font-size:10px}
+
+.gp-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  padding:0 30px 28px}
+
+.gp-card {
+  background:#fffdf9;
+  border:1px solid #d8c8ac;
+  border-radius:21px;
+  overflow:hidden}
+
+.gp-buy-card {
+  border-bottom:4px solid #e9565d}
+
+.gp-sell-card {
+  border-bottom:4px solid #3494d6}
+
+.gp-card-head {
+  text-align:center;
+  padding:18px 15px;
+  border-bottom:1px solid #e9e2d7}
+
+.gp-card-head h3 {
+  font-size:25px;
+  color:var(--navy);
+  margin:2px}
+
+.gp-card-head p,.gp-card-head small {
+  color:#888;
+  font-size:11px;
+  margin:0}
+
+.gp-main {
+  margin:15px 17px 11px;
+  padding:21px 9px;
+  text-align:center;
+  border-radius:15px}
+
+.gp-main.buy {
+  background:#fff4f2;
+  border:1px solid #f1d2ce}
+
+.gp-main.sell {
+  background:#f1f7fc;
+  border:1px solid #cedfed}
+
+.gp-main label,.gp-main em {
+  display:block;
+  font-size:12px;
+  color:#777;
+  font-style:normal}
+
+.gp-main strong {
+  display:block;
+  font-size:clamp(33px,3.6vw,46px);
+  letter-spacing:-.045em;
+  line-height:1.24}
+
+.gp-main.buy strong {
+  color:#e34d55}
+
+.gp-main.sell strong {
+  color:#2d8fd0}
+
+.gp-main strong small {
+  font-size:.48em}
+
+.gp-table {
+  margin:0 15px;
+  border:1px solid #e9e2d7;
+  border-radius:13px;
+  overflow:hidden;
+  background:white}
+
+.gp-row {
+  display:grid;
+  grid-template-columns:1.3fr .8fr 1fr;
+  gap:8px;
+  min-height:64px;
+  padding:11px;
+  align-items:center;
+  border-bottom:1px solid #eee8df}
+
+.gp-row:last-child {
+  border:0}
+
+.gp-row strong {
+  display:block;
+  font-size:13px;
+  line-height:1.35;
+  color:var(--navy);
+  word-break:keep-all}
+
+.gp-row small {
+  display:block;
+  color:#aaa;
+  font-size:10px}
+
+.gp-row b {
+  font-size:14px;
+  text-align:right;
+  white-space:nowrap}
+
+.gp-row.head {
+  min-height:40px;
+  background:#f5efe4;
+  color:#766957;
+  font-size:10px;
+  font-weight:900}
+
+.gp-row.head span:not(:first-child) {
+  text-align:right}
+
+.gp-row.highlight {
+  background:#fff8e7}
+
+.gp-row.highlight b {
+  color:#8d6427}
+
+.gp-row.silver {
+  background:#faf9f6}
+
+.gp-span-2 {
+  grid-column:2/4;
+  color:#8d6427}
+
+.gp-sell-table .gp-row {
+  grid-template-columns:1fr auto}
+
+.gp-note {
+  font-size:10px;
+  color:#81796f;
+  padding:4px 17px 16px;
+  min-height:70px}
+
+.gp-bottom {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin:0 30px 28px;
+  padding:19px 22px;
+  border:1px solid #ffffff2c;
+  background:#ffffff10;
+  color:white;
+  border-radius:16px}
+
+.gp-bottom strong {
+  font-size:17px}
+
+.gp-bottom p {
+  font-size:11px;
+  color:#ffffffab;
+  margin:4px 0}
+
+.dashboard {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px}
+
+.panel {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden}
+
+.panel-head {
+  padding:20px 23px;
+  border-bottom:1px solid #eee8df;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px}
+
+.panel-head strong {
+  font-size:20px;
+  color:var(--navy)}
+
+.panel-head span {
+  font-size:11px;
+  color:#75552d;
+  font-weight:800}
+
+.chart-wrap {
+  height:470px}
+
+.tradingview-widget-container {
+  height:100%;
+  width:100%}
+
+.tradingview-widget-container__widget {
+  height:100%;
+  width:100%}
+
+.news-item {
+  padding:17px 0;
+  border-bottom:1px solid #eee8df}
+
+.news-item:last-child {
+  border:0}
+
+.news-item strong {
+  display:block}
+
+.news-item p {
+  color:var(--muted);
+  font-size:13px;
+  margin:4px 0}
+
+.market-check {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:19px}
+
+.news-card,.quick-card,.location-card,.process-card {
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:white}
+
+.news-card h3,.quick-card h3 {
+  font-size:25px;
+  color:var(--navy);
+  margin:10px 0}
+
+.quick-card {
+  background:linear-gradient(130deg,#183758,#0c2139);
+  color:white}
+
+.quick-card h3 {
+  color:white}
+
+.quick-card p {
+  color:#ffffffae}
+
+.quick-stat {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:14px;
+  border:1px solid #ffffff16;
+  background:#ffffff10;
+  border-radius:14px;
+  margin-top:10px}
+
+.quick-stat span {
+  font-size:12px;
+  color:#ffffffb7}
+
+.quick-stat strong {
+  text-align:right;
+  font-size:12px}
+
+.service-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px}
+
+.service-card {
+  position:relative;
+  height:330px;
+  overflow:hidden;
+  border-radius:23px;
+  background:#222}
+
+.service-card.large {
+  grid-column:span 2}
+
+.service-card:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 10%,#040c14e9)}
+
+.service-copy {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:23px;
+  z-index:1;
+  color:white}
+
+.service-copy span {
+  color:#e6c77f;
+  letter-spacing:.12em;
+  font-size:11px;
+  font-weight:800}
+
+.service-copy h3 {
+  font-size:25px;
+  line-height:1.2;
+  margin:6px 0}
+
+.service-copy p {
+  font-size:13px;
+  color:#ffffffbf;
+  margin:0}
+
+.gift-section {
+  background:linear-gradient(#ffffff3b,#f2eadc9e)}
+
+.gift-intro {
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:24px}
+
+.gift-intro h2 {
+  font-size:clamp(30px,4vw,45px);
+  line-height:1.2;
+  color:var(--navy);
+  margin:10px 0}
+
+.gift-intro p,.gift-intro aside {
+  color:var(--muted);
+  font-size:14px}
+
+.gift-intro aside {
+  max-width:350px;
+  align-self:end}
+
+.gift-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px}
+
+.gift-card {
+  overflow:hidden;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px}
+
+.gift-image {
+  aspect-ratio:4/5;
+  position:relative;
+  background:#eee7d9}
+
+.gift-tag {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#fffdf8e8;
+  border-radius:30px;
+  padding:4px 10px;
+  color:#75552d;
+  font-size:10px;
+  font-weight:900}
+
+.gift-content {
+  padding:19px}
+
+.gift-content h3 {
+  color:var(--navy);
+  margin:0 0 7px;
+  font-size:18px}
+
+.gift-content p {
+  color:var(--muted);
+  font-size:12px;
+  margin:0}
+
+.gift-bottom {
+  background:#ffffffc7;
+  border-radius:23px;
+  padding:25px;
+  margin-top:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px}
+
+.gift-bottom strong {
+  color:var(--navy)}
+
+.gift-bottom p {
+  color:var(--muted);
+  font-size:13px}
+
+.ai-note {
+  font-size:11px;
+  color:#91887d;
+  margin-top:11px}
+
+.process-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px}
+
+.process-num {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--navy);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-weight:900}
+
+.process-card h3 {
+  color:var(--navy)}
+
+.process-card p {
+  font-size:13px;
+  color:var(--muted)}
+
+.benefit {
+  background:linear-gradient(130deg,var(--navy),#254d73);
+  border-radius:25px;
+  padding:35px;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px}
+
+.benefit h2 {
+  margin:0}
+
+.benefit p {
+  color:#ffffffb0}
+
+.chip {
+  display:inline-block;
+  background:#ffffff18;
+  border-radius:30px;
+  padding:6px 13px;
+  margin:5px 5px 0 0;
+  font-size:12px}
+
+.location-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px}
+
+.location-card h3 {
+  color:var(--navy);
+  font-size:23px}
+
+.location-address {
+  color:#75552d;
+  font-weight:900;
+  font-size:18px}
+
+.location-steps {
+  color:var(--muted);
+  font-size:13px}
+
+.location-steps p {
+  margin:12px 0}
+
+.location-steps b {
+  background:var(--ivory);
+  color:#75552d;
+  border-radius:50%;
+  padding:4px 10px;
+  margin-right:7px}
+
+.contact-card {
+  background:linear-gradient(130deg,#72552f,#aa864c);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center}
+
+.contact-card h3 {
+  color:white}
+
+.contact-card p {
+  color:#ffffffb8}
+
+.footer {
+  background:var(--navy3);
+  color:#ffffffb1;
+  padding:37px 0 24px;
+  margin-top:20px}
+
+.footer-top {
+  display:grid;
+  grid-template-columns:1.2fr .8fr .8fr;
+  gap:30px}
+
+.footer strong {
+  display:block;
+  color:white;
+  font-size:17px}
+
+.footer a {
+  display:block;
+  margin-top:6px;
+  font-size:13px}
+
+.footer p {
+  font-size:13px}
+
+.footer-bottom {
+  border-top:1px solid #ffffff1b;
+  margin-top:25px;
+  padding-top:17px;
+  font-size:11px}
+
+.business-info {
+  background:#f7f3eb;
+  border-top:1px solid #e5dfd3;
+  padding:28px 0;
+  color:#555}
+
+.business-info h3 {
+  font-size:17px}
+
+.business-info p {
+  font-size:12px}
+
+.floating {
+  position:fixed;
+  right:15px;
+  bottom:13px;
+  z-index:200;
+  display:flex;
+  gap:9px;
+  flex-direction:column}
+
+.floating a {
+  min-width:135px;
+  min-height:45px;
+  padding:10px 15px;
+  border-radius:30px;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  box-shadow:0 10px 24px #0002}
+
+.float-phone {
+  background:var(--navy);
+  color:white}
+
+.float-kakao {
+  background:#fee500;
+  color:#191919}
+
+.market-status {
+  display:block;
+  color:#ffffffb9;
+  font-size:11px;
+  margin-top:5px}
+
+
+@media(max-width:980px) {
+  .nav {
+  display:none}
+
+.hero-shell {
+  grid-template-columns:1fr}
+
+.dashboard,.market-check,.location-grid {
+  grid-template-columns:1fr}
+
+.service-grid {
+  grid-template-columns:repeat(2,1fr)}
+
+.gift-grid {
+  grid-template-columns:repeat(2,1fr)}
+
+.process-grid {
+  grid-template-columns:repeat(2,1fr)}
+
+.gp-grid {
+  grid-template-columns:1fr}
+
+}
+
+
+@media(max-width:680px) {
+  .container {
+  width:calc(100% - 24px)}
+
+.topbar {
+  display:none}
+
+.header-inner {
+  min-height:69px}
+
+.symbol {
+  width:42px;
+  height:42px}
+
+.brand strong {
+  font-size:18px}
+
+.brand small {
+  font-size:9px}
+
+.header-inner>.btn {
+  font-size:12px;
+  padding:7px 13px;
+  min-height:39px}
+
+.hero {
+  padding:17px 0}
+
+.hero-shell {
+  border-radius:23px}
+
+.hero-copy {
+  padding:35px 24px}
+
+.hero h1 {
+  font-size:39px}
+
+.hero p {
+  font-size:15px}
+
+.hero-visual {
+  min-height:250px;
+  height:250px}
+
+section {
+  padding:52px 0}
+
+.section-head {
+  display:block}
+
+.section-head>p {
+  margin-top:12px}
+
+.gp-top {
+  display:block;
+  padding:21px 15px}
+
+.gp-top h3 {
+  font-size:21px}
+
+.gp-live-info {
+  text-align:left;
+  margin-top:10px}
+
+.reference-grid {
+  grid-template-columns:1fr 1fr;
+  margin:0 12px 15px}
+
+.reference {
+  padding:12px}
+
+.reference:nth-child(3) {
+  grid-column:span 2}
+
+.reference strong {
+  font-size:18px}
+
+.gp-grid {
+  padding:0 11px 12px;
+  gap:13px}
+
+.gp-card-head h3 {
+  font-size:22px}
+
+.gp-main strong {
+  font-size:36px}
+
+.gp-row {
+  min-height:57px;
+  grid-template-columns:1.18fr .82fr 1fr;
+  padding:9px 7px;
+  gap:5px}
+
+.gp-row strong {
+  font-size:11px}
+
+.gp-row small {
+  font-size:8px}
+
+.gp-row b {
+  font-size:11px}
+
+.gp-row.head {
+  font-size:9px}
+
+.gp-note {
+  font-size:9px}
+
+.gp-bottom {
+  margin:0 11px 12px;
+  display:block;
+  padding:17px}
+
+.gp-bottom .actions {
+  display:grid;
+  grid-template-columns:1fr 1fr}
+
+.chart-wrap {
+  height:470px}
+
+.service-grid,.process-grid {
+  grid-template-columns:1fr}
+
+.service-card,.service-card.large {
+  grid-column:auto;
+  height:285px}
+
+.gift-grid {
+  gap:10px}
+
+.gift-content {
+  padding:13px}
+
+.gift-content h3 {
+  font-size:16px}
+
+.gift-content p {
+  font-size:11px}
+
+.gift-intro {
+  display:block}
+
+.gift-bottom {
+  display:block}
+
+.benefit {
+  display:block;
+  padding:27px}
+
+.footer-top {
+  grid-template-columns:1fr}
+
+.floating {
+  left:12px;
+  right:12px;
+  bottom:10px;
+  flex-direction:row}
+
+.floating a {
+  min-width:0;
+  flex:1}
+
+.gift-intro aside {
+  max-width:none}
+
+}
+  </style>
+ </head>
+ <body>
+  <div class="topbar">
+   <div class="container">
+    <span>
+     세종 산울동 금거래소
+     <b>
+      금센티브
+     </b>
+    </span>
+    <span>
+     상담전화 044-417-6980
+    </span>
+   </div>
+  </div>
+  <header>
+   <div class="container header-inner">
+    <a class="brand" href="#top">
+     <div class="symbol">
+      G
+     </div>
+     <div>
+      <strong>
+       금센티브
+      </strong>
+      <small>
+       GOLDCENTIVE
+      </small>
+     </div>
+    </a>
+    <nav class="nav">
+     <a href="#price">
+      오늘의 시세
+     </a>
+     <a href="#market">
+      국제 시세
+     </a>
+     <a href="#service">
+      매입 품목
+     </a>
+     <a href="#gift">
+      금 선물
+     </a>
+     <a href="#process">
+      거래 안내
+     </a>
+     <a href="#location">
+      오시는 길
+     </a>
+    </nav>
+    <a class="btn navy" href="tel:0444176980">
+     전화 상담
+    </a>
+   </div>
+  </header>
+  <main id="top">
+   <section class="hero">
+    <div class="container">
+     <div class="hero-shell">
+      <div class="hero-copy">
+       <div class="kicker">
+        SEJONG GOLD EXCHANGE
+       </div>
+       <h1>
+        금을 거래하는 순간,
+        <br/>
+        <span>
+         기준은 투명해야 합니다.
+        </span>
+       </h1>
+       <p>
+        순금부터 18K·14K 주얼리, 은제품, 치금까지. 금센티브는 고객님 앞에서 중량과 제품을 확인하고 현재 시세를 기준으로 거래 내용을 안내합니다.
+       </p>
+       <div class="actions">
+        <a class="btn navy" href="#price">
+         오늘의 금시세 보기
+        </a>
+        <a class="btn light" href="https://naver.me/5JqeQaQX" rel="noopener" target="_blank">
+         매장 위치 확인
+        </a>
+       </div>
+      </div>
+      <div class="hero-visual">
+       <img alt="골드바" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1200&q=85"/>
+       <div class="hero-stamp">
+        <strong>
+         GOLD + INCENTIVE
+        </strong>
+        현금보다 오래 남는 가치를 전합니다.
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="price">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <div class="kicker">
+        TODAY'S GOLD PRICE
+       </div>
+       <h2>
+        금센티브 오늘의 시세
+       </h2>
+      </div>
+      <p>
+       손님이 사실 때와 파실 때를 구분해 금·은 가격을 확인하실 수 있습니다. 매장 가격은 담당자가 수동 입력합니다.
+      </p>
+     </div>
+     <div class="gp-shell">
+      <div class="gp-top">
+       <div>
+        <span class="gp-badge">
+         매장 고시 시세
+        </span>
+        <h3>
+         <span id="priceTitleDate">
+          10월 21일
+         </span>
+         금센티브 시세
+        </h3>
+        <p>
+         <span id="priceFullDate">
+          2026.10.21
+         </span>
+         ·
+         <span id="priceTime">
+          10:00
+         </span>
+         기준
+        </p>
+       </div>
+       <div class="gp-live-info">
+        국제 금시세 · 환율
+        <strong id="updatedAt">
+         데이터 확인 중
+        </strong>
+        <small class="market-status" id="marketStatus">
+         외부 자료를 불러오고 있습니다.
+        </small>
+       </div>
+      </div>
+      <div class="reference-grid">
+       <div class="reference">
+        <span>
+         국제 금시세
+        </span>
+        <strong id="goldSpot">
+         조회 중
+        </strong>
+        <small>
+         USD / T.oz
+        </small>
+       </div>
+       <div class="reference">
+        <span>
+         최근 원달러 환율
+        </span>
+        <strong id="usdKrw">
+         조회 중
+        </strong>
+        <small>
+         KRW / USD · 제공처 갱신 주기 적용
+        </small>
+       </div>
+       <div class="reference">
+        <span>
+         순금 원재료 환산가
+        </span>
+        <strong id="rawGold">
+         조회 중
+        </strong>
+        <small>
+         24K · 3.75g · 단순 환산값
+        </small>
+       </div>
+      </div>
+      <div class="gp-grid">
+       <article class="gp-card gp-buy-card">
+        <div class="gp-card-head">
+         <small>
+          매장 고시 시세
+         </small>
+         <h3>
+          손님이 사실 때
+         </h3>
+         <p>
+          골드바 · VAT 별도
+         </p>
+        </div>
+        <div class="gp-main buy">
+         <label>
+          24K 순금 덩어리 1돈 기준
+         </label>
+         <strong>
+          <span id="buyMain1">
+           692,000
+          </span>
+          <small>
+           원
+          </small>
+         </strong>
+         <em>
+          24K · 3.75g
+         </em>
+        </div>
+        <div class="gp-table">
+         <div class="gp-row head">
+          <span>
+           품목
+          </span>
+          <span>
+           1돈당
+          </span>
+          <span>
+           총 금액
+          </span>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            GBK 골드바 1돈
+           </strong>
+           <small>
+            24K · 3.75g
+           </small>
+          </div>
+          <b id="buy1Unit">
+          </b>
+          <b id="buy1Total">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            GBK 골드바 3돈
+           </strong>
+           <small>
+            24K · 11.25g
+           </small>
+          </div>
+          <b id="buy3Unit">
+          </b>
+          <b id="buy3Total">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            GBK 골드바 5돈
+           </strong>
+           <small>
+            24K · 18.75g
+           </small>
+          </div>
+          <b id="buy5Unit">
+          </b>
+          <b id="buy5Total">
+          </b>
+         </div>
+         <div class="gp-row highlight">
+          <div>
+           <strong>
+            GBK 골드바 10돈
+           </strong>
+           <small>
+            24K · 37.5g
+           </small>
+          </div>
+          <b id="buy10Unit">
+          </b>
+          <b id="buy10Total">
+          </b>
+         </div>
+         <div class="gp-row silver">
+          <div>
+           <strong>
+            실버바 1kg
+           </strong>
+           <small>
+            999.9
+           </small>
+          </div>
+          <b class="gp-span-2" id="silverBuy">
+          </b>
+         </div>
+        </div>
+        <p class="gp-note">
+         ※ 골드바 가격은 1돈당 단가이며 우측은 총 금액입니다.
+         <br/>
+         ※ 구매 가격은 VAT 별도입니다.
+        </p>
+       </article>
+       <article class="gp-card gp-sell-card">
+        <div class="gp-card-head">
+         <small>
+          매장 고시 시세
+         </small>
+         <h3>
+          손님이 파실 때
+         </h3>
+         <p>
+          당일 금 매입 시세
+         </p>
+        </div>
+        <div class="gp-main sell">
+         <label>
+          검인 골드바
+         </label>
+         <strong>
+          <span id="sellMain">
+           673,000
+          </span>
+          <small>
+           원
+          </small>
+         </strong>
+         <em>
+          1돈 · 3.75g 기준
+         </em>
+        </div>
+        <div class="gp-table gp-sell-table">
+         <div class="gp-row head">
+          <span>
+           품목
+          </span>
+          <span>
+           매입 시세
+          </span>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            검인 골드바
+           </strong>
+           <small>
+            24K · 3.75g
+           </small>
+          </div>
+          <b id="sellGoldbar">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            3대 마크 순금 덩어리
+           </strong>
+           <small>
+            24K · 3.75g
+           </small>
+          </div>
+          <b id="sellLump">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            24K 순금 반지 · 돌반지
+           </strong>
+           <small>
+            순금 제품
+           </small>
+          </div>
+          <b id="sellRing">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            24K 순금 목걸이 · 팔찌
+           </strong>
+           <small>
+            순금 제품
+           </small>
+          </div>
+          <b id="sellNecklace">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            18K 금시세
+           </strong>
+           <small>
+            제품별 적용
+           </small>
+          </div>
+          <b id="sell18k">
+          </b>
+         </div>
+         <div class="gp-row">
+          <div>
+           <strong>
+            14K 금시세
+           </strong>
+           <small>
+            제품별 적용
+           </small>
+          </div>
+          <b id="sell14k">
+          </b>
+         </div>
+         <div class="gp-row silver">
+          <div>
+           <strong>
+            은 · 실버바 1kg
+           </strong>
+           <small>
+            999.9 · 1kg 기준
+           </small>
+          </div>
+          <b id="silverSell">
+          </b>
+         </div>
+        </div>
+        <p class="gp-note">
+         ※ 실제 매입가는 제품 함량·중량·상태에 따라 달라질 수 있습니다.
+         <br/>
+         ※ 치금·금니·은수저·백금은 별도 문의 바랍니다.
+         <br/>
+         ※ 파실 때 시세는 분석료가 포함된 최종 지급 가격으로 별도의 분석료가 차감되지 않습니다.
+        </p>
+       </article>
+      </div>
+      <div class="gp-bottom">
+       <div>
+        <strong>
+         금 팔기 전, 현재 매입가부터 확인하세요.
+        </strong>
+        <p>
+         사진과 대략적인 중량을 보내주시면 예상 금액 상담이 가능합니다.
+        </p>
+       </div>
+       <div class="actions">
+        <a class="btn light" href="tel:0444176980">
+         044-417-6980
+        </a>
+        <a class="btn" href="http://pf.kakao.com/_UUdJX/chat" rel="noopener" style="background:#fee500;color:#191919" target="_blank">
+         카카오톡 문의
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="market">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <div class="kicker">
+        GLOBAL MARKET
+       </div>
+       <h2>
+        국제 금시세 차트
+       </h2>
+      </div>
+      <p>
+       국제 금 가격의 현재 흐름을 외부 TradingView 차트에서 확인하실 수 있습니다. 데이터 제공처에 따라 지연될 수 있습니다.
+      </p>
+     </div>
+     <div class="dashboard">
+      <div class="panel">
+       <div class="panel-head">
+        <strong>
+         XAU / USD
+        </strong>
+        <span>
+         INTERNATIONAL GOLD
+        </span>
+       </div>
+       <div class="chart-wrap">
+        <div class="tradingview-widget-container">
+         <div class="tradingview-widget-container__widget">
+         </div>
+         <script async="" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" type="text/javascript">
+          {"autosize":true,"symbol":"OANDA:XAUUSD","interval":"60","timezone":"Asia/Seoul","theme":"light","style":"1","locale":"kr","allow_symbol_change":false,"calendar":false,"support_host":"https://www.tradingview.com"}
+         </script>
+        </div>
+       </div>
+      </div>
+      <div class="panel">
+       <div class="panel-head">
+        <strong>
+         시장 체크포인트
+        </strong>
+        <span>
+         GOLD MARKET
+        </span>
+       </div>
+       <div style="padding:15px 26px">
+        <div class="news-item">
+         <strong>
+          국제 금 가격
+         </strong>
+         <p>
+          국제 금값은 달러, 미국 국채금리, 기준금리 전망과 지정학적 위험 등에 영향을 받습니다.
+         </p>
+        </div>
+        <div class="news-item">
+         <strong>
+          원달러 환율
+         </strong>
+         <p>
+          국내 금 가격은 국제 금값뿐 아니라 원달러 환율 변화에도 영향을 받을 수 있습니다.
+         </p>
+        </div>
+        <div class="news-item">
+         <strong>
+          실제 국내 거래가격
+         </strong>
+         <p>
+          국제시세를 단순 환산한 가격과 실제 국내 금거래소 시세는 다를 수 있습니다.
+         </p>
+        </div>
+        <div class="news-item">
+         <strong>
+          거래 전 시세 확인
+         </strong>
+         <p>
+          고객용 시세는 수동 입력이며 최종 거래 시점의 가격을 다시 확인해드립니다.
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section>
+    <div class="container">
+     <div class="market-check">
+      <div class="news-card">
+       <div class="kicker">
+        GOLD INFORMATION
+       </div>
+       <h3>
+        금 거래 전 알아두세요
+       </h3>
+       <div class="news-item">
+        <strong>
+         24K · 18K · 14K는 함량이 다릅니다.
+        </strong>
+        <p>
+         같은 중량이라도 금 함량에 따라 매입 가격이 달라집니다.
+        </p>
+       </div>
+       <div class="news-item">
+        <strong>
+         끊어진 제품도 상담 가능합니다.
+        </strong>
+        <p>
+         오래된 반지, 목걸이, 귀걸이도 확인해드립니다.
+        </p>
+       </div>
+       <div class="news-item">
+        <strong>
+         치금과 은제품도 확인 가능합니다.
+        </strong>
+        <p>
+         금니, 치금, 은수저 등도 제품 확인 후 상담합니다.
+        </p>
+       </div>
+      </div>
+      <div class="quick-card">
+       <div class="kicker" style="color:#e0c17b">
+        GOLDCENTIVE
+       </div>
+       <h3>
+        처음 금을 파셔도
+        <br/>
+        어렵지 않게 안내합니다.
+       </h3>
+       <p>
+        제품 확인부터 중량 측정, 시세 안내까지 순서대로 설명해드립니다.
+       </p>
+       <div class="quick-stat">
+        <span>
+         위치
+        </span>
+        <strong>
+         세종시 산울7로 11
+         <br/>
+         712동 상가입구 1층 E-115호
+        </strong>
+       </div>
+       <div class="quick-stat">
+        <span>
+         상담
+        </span>
+        <strong>
+         전화 · 카카오톡
+        </strong>
+       </div>
+       <div class="quick-stat">
+        <span>
+         취급
+        </span>
+        <strong>
+         금 · 은 · 치금
+        </strong>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="service">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <div class="kicker">
+        OUR SERVICE
+       </div>
+       <h2>
+        금센티브 취급 품목
+       </h2>
+      </div>
+      <p>
+       순금부터 주얼리, 은제품, 치금까지 다양한 귀금속을 확인해드립니다.
+      </p>
+     </div>
+     <div class="service-grid">
+      <article class="service-card large">
+       <img alt="순금 골드바" loading="lazy" src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=1100&q=85"/>
+       <div class="service-copy">
+        <span>
+         PURE GOLD
+        </span>
+        <h3>
+         순금 · 골드바
+        </h3>
+        <p>
+         골드바와 순금 제품의 판매 및 매입 시세를 안내합니다.
+        </p>
+       </div>
+      </article>
+      <article class="service-card">
+       <img alt="18K 14K 금 주얼리" loading="lazy" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85"/>
+       <div class="service-copy">
+        <span>
+         GOLD JEWELRY
+        </span>
+        <h3>
+         18K · 14K 주얼리
+        </h3>
+        <p>
+         반지, 팔찌, 목걸이, 귀걸이 등을 확인해드립니다.
+        </p>
+       </div>
+      </article>
+      <article class="service-card">
+       <img alt="은제품" loading="lazy" src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?auto=format&fit=crop&w=800&q=85"/>
+       <div class="service-copy">
+        <span>
+         SILVER
+        </span>
+        <h3>
+         은수저 · 은제품
+        </h3>
+        <p>
+         은수저, 은제품, 실버바 매입 상담이 가능합니다.
+        </p>
+       </div>
+      </article>
+      <article class="service-card">
+       <img alt="치금 금니 상담" loading="lazy" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=85"/>
+       <div class="service-copy">
+        <span>
+         DENTAL GOLD
+        </span>
+        <h3>
+         치금 · 금니
+        </h3>
+        <p>
+         보관 중인 치금과 금니도 제품 확인 후 상담합니다.
+        </p>
+       </div>
+      </article>
+      <article class="service-card large">
+       <img alt="금시세 상담" loading="lazy" src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1100&q=85"/>
+       <div class="service-copy">
+        <span>
+         CONSULTING
+        </span>
+        <h3>
+         금시세 · 매입 상담
+        </h3>
+        <p>
+         방문 전 전화 또는 카카오톡으로 현재 시세와 거래 방법을 문의하실 수 있습니다.
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="gift-section" id="gift">
+    <div class="container">
+     <div class="gift-intro">
+      <div>
+       <div class="kicker">
+        SPECIAL GOLD GIFT
+       </div>
+       <h2>
+        특별한 날,
+        <br/>
+        오래 남는 금 선물
+       </h2>
+       <p>
+        의미를 오래 간직할 수 있는 특별한 금 선물을 준비해보세요.
+       </p>
+      </div>
+      <aside>
+       감사 · 합격 · 취업 · 입학 · 생일 · 기념일 · 아이 선물 등 다양한 순금 제품을 상담 및 주문하실 수 있습니다.
+      </aside>
+     </div>
+     <div class="gift-grid">
+      <article class="gift-card">
+       <div class="gift-image">
+        <img alt="감사의 마음을 전하는 순금 선물" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2Y1ZWJkYSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q4YzI5YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzUwIiBmaWxsPSJ1cmwoI2cpIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzI1IiByPSIxNDUiIGZpbGw9IiNiMjhhNGEiIG9wYWNpdHk9Ii4yMyIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMyNSIgcj0iMTE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNhNDdiM2EiIHN0cm9rZS13aWR0aD0iOCIvPjx0ZXh0IHg9IjMwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjY1IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5HPC90ZXh0Pjx0ZXh0IHg9IjMwMCIgeT0iNTU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI3IiBmb250LWZhbWlseT0iQXJpYWwiIGZpbGw9IiM3MzU1MmQiPlRIQU5LIFlPVTwvdGV4dD48dGV4dCB4PSIzMDAiIHk9IjYwNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5JTUFHRSBQUkVWSUVXPC90ZXh0Pjwvc3ZnPg=="/>
+        <span class="gift-tag">
+         THANK YOU
+        </span>
+       </div>
+       <div class="gift-content">
+        <h3>
+         감사의 마음
+        </h3>
+        <p>
+         부모님, 선생님 그리고 고마운 분께 전하는 특별한 순금 선물.
+        </p>
+       </div>
+      </article>
+      <article class="gift-card">
+       <div class="gift-image">
+        <img alt="합격과 성공을 기원하는 순금 선물" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2Y1ZWJkYSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q4YzI5YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzUwIiBmaWxsPSJ1cmwoI2cpIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzI1IiByPSIxNDUiIGZpbGw9IiNiMjhhNGEiIG9wYWNpdHk9Ii4yMyIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMyNSIgcj0iMTE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNhNDdiM2EiIHN0cm9rZS13aWR0aD0iOCIvPjx0ZXh0IHg9IjMwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjY1IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5HPC90ZXh0Pjx0ZXh0IHg9IjMwMCIgeT0iNTU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI3IiBmb250LWZhbWlseT0iQXJpYWwiIGZpbGw9IiM3MzU1MmQiPlNVQ0NFU1M8L3RleHQ+PHRleHQgeD0iMzAwIiB5PSI2MDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZmlsbD0iIzczNTUyZCI+SU1BR0UgUFJFVklFVzwvdGV4dD48L3N2Zz4="/>
+        <span class="gift-tag">
+         SUCCESS
+        </span>
+       </div>
+       <div class="gift-content">
+        <h3>
+         합격 · 성공 기원
+        </h3>
+        <p>
+         시험, 취업, 승진처럼 새로운 시작을 응원하는 금 선물.
+        </p>
+       </div>
+      </article>
+      <article class="gift-card">
+       <div class="gift-image">
+        <img alt="행운과 복을 기원하는 순금 선물" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2Y1ZWJkYSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q4YzI5YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzUwIiBmaWxsPSJ1cmwoI2cpIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzI1IiByPSIxNDUiIGZpbGw9IiNiMjhhNGEiIG9wYWNpdHk9Ii4yMyIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMyNSIgcj0iMTE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNhNDdiM2EiIHN0cm9rZS13aWR0aD0iOCIvPjx0ZXh0IHg9IjMwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjY1IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5HPC90ZXh0Pjx0ZXh0IHg9IjMwMCIgeT0iNTU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI3IiBmb250LWZhbWlseT0iQXJpYWwiIGZpbGw9IiM3MzU1MmQiPkdPT0QgTFVDSzwvdGV4dD48dGV4dCB4PSIzMDAiIHk9IjYwNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5JTUFHRSBQUkVWSUVXPC90ZXh0Pjwvc3ZnPg=="/>
+        <span class="gift-tag">
+         GOOD LUCK
+        </span>
+       </div>
+       <div class="gift-content">
+        <h3>
+         행운 · 기념 선물
+        </h3>
+        <p>
+         좋은 일이 가득하길 바라는 마음을 금에 담아 선물해보세요.
+        </p>
+       </div>
+      </article>
+      <article class="gift-card">
+       <div class="gift-image">
+        <img alt="아이를 위한 순금 선물" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2Y1ZWJkYSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q4YzI5YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzUwIiBmaWxsPSJ1cmwoI2cpIi8+PGNpcmNsZSBjeD0iMzAwIiBjeT0iMzI1IiByPSIxNDUiIGZpbGw9IiNiMjhhNGEiIG9wYWNpdHk9Ii4yMyIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMyNSIgcj0iMTE2IiBmaWxsPSJub25lIiBzdHJva2U9IiNhNDdiM2EiIHN0cm9rZS13aWR0aD0iOCIvPjx0ZXh0IHg9IjMwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjY1IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5HPC90ZXh0Pjx0ZXh0IHg9IjMwMCIgeT0iNTU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI3IiBmb250LWZhbWlseT0iQXJpYWwiIGZpbGw9IiM3MzU1MmQiPlNQRUNJQUwgR0lGVDwvdGV4dD48dGV4dCB4PSIzMDAiIHk9IjYwNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxOSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmaWxsPSIjNzM1NTJkIj5JTUFHRSBQUkVWSUVXPC90ZXh0Pjwvc3ZnPg=="/>
+        <span class="gift-tag">
+         SPECIAL GIFT
+        </span>
+       </div>
+       <div class="gift-content">
+        <h3>
+         소중한 사람을 위한 선물
+        </h3>
+        <p>
+         특별한 순간을 오래 기억할 수 있는 금 선물.
+        </p>
+       </div>
+      </article>
+     </div>
+     <div class="gift-bottom">
+      <div>
+       <strong>
+        찾으시는 디자인이 따로 있으신가요?
+       </strong>
+       <p>
+        다양한 디자인을 확인하신 후 주문 상담이 가능합니다. 가격은 당일 금시세와 제품 구성에 따라 달라질 수 있습니다.
+       </p>
+      </div>
+      <div class="actions">
+       <a class="btn navy" href="http://pf.kakao.com/_UUdJX/chat" rel="noopener" target="_blank">
+        카카오톡 제품 문의
+       </a>
+       <a class="btn light" href="tel:0444176980">
+        전화 주문 상담
+       </a>
+      </div>
+     </div>
+     <p class="ai-note">
+      ※ 금 선물 이미지 4장은 원본 파일이 없어 임시 안내 이미지로 대체했습니다. 실제 판매 제품의 디자인·색상·구성은 상담 시 확인해 주세요.
+     </p>
+    </div>
+   </section>
+   <section id="process">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <div class="kicker">
+        HOW IT WORKS
+       </div>
+       <h2>
+        금 매입은 이렇게 진행됩니다.
+       </h2>
+      </div>
+     </div>
+     <div class="process-grid">
+      <div class="process-card">
+       <div class="process-num">
+        01
+       </div>
+       <h3>
+        제품 확인
+       </h3>
+       <p>
+        가지고 오신 제품의 종류와 금 함량을 확인합니다.
+       </p>
+      </div>
+      <div class="process-card">
+       <div class="process-num">
+        02
+       </div>
+       <h3>
+        중량 측정
+       </h3>
+       <p>
+        고객님이 확인하실 수 있도록 제품 중량을 측정합니다.
+       </p>
+      </div>
+      <div class="process-card">
+       <div class="process-num">
+        03
+       </div>
+       <h3>
+        시세 안내
+       </h3>
+       <p>
+        현재 금센티브 시세를 기준으로 예상 매입 금액을 안내합니다.
+       </p>
+      </div>
+      <div class="process-card">
+       <div class="process-num">
+        04
+       </div>
+       <h3>
+        거래 진행
+       </h3>
+       <p>
+        안내받은 가격을 확인하신 뒤 거래 여부를 결정하시면 됩니다.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section>
+    <div class="container">
+     <div class="benefit">
+      <div>
+       <h2>
+        금센티브 방문 고객 혜택
+       </h2>
+       <p>
+        방문 후 리뷰를 남겨주신 고객님께 준비한 혜택입니다.
+       </p>
+       <span class="chip">
+        리뷰 작성 시 커피 쿠폰
+       </span>
+       <span class="chip">
+        AI 무료 사주분석
+       </span>
+      </div>
+      <a class="btn light" href="http://pf.kakao.com/_UUdJX/chat" rel="noopener" target="_blank">
+       혜택 문의하기
+      </a>
+     </div>
+    </div>
+   </section>
+   <section id="location">
+    <div class="container">
+     <div class="section-head">
+      <div>
+       <div class="kicker">
+        LOCATION
+       </div>
+       <h2>
+        금센티브 오시는 길
+       </h2>
+      </div>
+     </div>
+     <div class="location-grid">
+      <div class="location-card">
+       <h3>
+        세종 산울동 금센티브
+       </h3>
+       <p class="location-address">
+        세종시 산울7로 11,
+        <br/>
+        712동 상가입구 1층 E-115호
+       </p>
+       <div class="location-steps">
+        <p>
+         <b>
+          1
+         </b>
+         712동 상가입구 주차장으로 들어와 주세요.
+        </p>
+        <p>
+         <b>
+          2
+         </b>
+         712동 상가입구 앞에 주차 후 엘리베이터를 이용해 1층으로 이동합니다.
+        </p>
+        <p>
+         <b>
+          3
+         </b>
+         엘리베이터에서 나오신 후 왼쪽으로 이동하면 E-115호 금센티브가 있습니다.
+        </p>
+        <p>
+         <b>
+          4
+         </b>
+         산울동 서브웨이 건물에서 조금 더 아래쪽으로 내려오시면 찾으실 수 있습니다.
+        </p>
+       </div>
+       <div class="actions">
+        <a class="btn navy" href="https://naver.me/5JqeQaQX" rel="noopener" target="_blank">
+         네이버 지도
+        </a>
+        <a class="btn light" href="https://youtube.com/shorts/aBbcXD168M8" rel="noopener" target="_blank">
+         영상 길안내
+        </a>
+       </div>
+      </div>
+      <div class="location-card contact-card">
+       <div class="kicker" style="color:#f1d899">
+        CONTACT
+       </div>
+       <h3>
+        방문 전 현재 시세를
+        <br/>
+        확인해보세요.
+       </h3>
+       <p>
+        금시세는 시장 상황에 따라 변동될 수 있습니다. 전화 또는 카카오톡으로 현재 시세를 확인하시면 더욱 편리합니다.
+       </p>
+       <div class="actions">
+        <a class="btn light" href="tel:0444176980">
+         044-417-6980 전화하기
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-top">
+     <div>
+      <strong>
+       금센티브
+      </strong>
+      <p>
+       Gold + Incentive = GOLDCENTIVE
+       <br/>
+       현금보다 오래 남는 가치를 전합니다.
+      </p>
+     </div>
+     <div>
+      <strong>
+       매장 안내
+      </strong>
+      <p>
+       세종시 산울7로 11
+       <br/>
+       712동 상가입구 1층 E-115호
+      </p>
+      <a href="tel:0444176980">
+       044-417-6980
+      </a>
+     </div>
+     <div>
+      <strong>
+       빠른 연결
+      </strong>
+      <a href="#price">
+       오늘의 금시세
+      </a>
+      <a href="#gift">
+       특별한 금 선물
+      </a>
+      <a href="https://naver.me/5JqeQaQX" rel="noopener" target="_blank">
+       네이버 지도
+      </a>
+      <a href="http://pf.kakao.com/_UUdJX/chat" rel="noopener" target="_blank">
+       카카오톡 상담
+      </a>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     © GOLDCENTIVE. 금·은 시세는 시장 상황에 따라 변동될 수 있으며 실제 거래 가격은 제품 상태와 함량 등에 따라 달라질 수 있습니다.
+    </div>
+   </div>
+  </footer>
+  <div class="business-info">
+   <div class="container">
+    <h3>
+     금센티브 금거래소
+    </h3>
+    <p>
+     대표자 : 장두원
+     <br/>
+     사업자등록번호 : 588-18-02629
+     <br/>
+     주소 : 세종특별자치시 산울7로 11, 712동 1층 115호 (산울동, 산울마을7단지)
+     <br/>
+     대표전화 :
+     <a href="tel:0444176980">
+      044-417-6980
+     </a>
+    </p>
+    <p>
+     © 2026 금센티브 금거래소. All Rights Reserved.
+    </p>
+   </div>
+  </div>
+  <div class="floating">
+   <a class="float-phone" href="tel:0444176980">
+    전화 상담
+   </a>
+   <a class="float-kakao" href="http://pf.kakao.com/_UUdJX/chat" rel="noopener" target="_blank">
+    카톡 상담
+   </a>
+  </div>
+  <script>
+   /* 고객용 매장 가격: 매일 이 설정과 시세 기준일시를 직접 변경하세요. 국제시세와 별개입니다. */
+/* 시세 설정은 HTML 최상단의 DAILY_PRICE를 수정하세요. */
+const el=id=>document.getElementById(id); const num=v=>Math.round(Number(v)).toLocaleString('ko-KR');const krw=v=>num(v)+'원';
+function updateDailyPrice(){const p=DAILY_PRICE, buy1=p.buyLump+5000,buy3=buy1-3000,buy5=buy1-5000,buy10=buy1-10000;const stamp=new Date(p.asOf);if(Number.isFinite(stamp.getTime())){const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(stamp);const part=type=>parts.find(v=>v.type===type)?.value;el('priceTitleDate').textContent=`${Number(part('month'))}월 ${Number(part('day'))}일`;el('priceFullDate').textContent=`${part('year')}.${part('month')}.${part('day')}`;el('priceTime').textContent=`${part('hour')}:${part('minute')}`;}const values={buyMain1:num(p.buyLump),buy1Unit:krw(buy1),buy1Total:krw(buy1),buy3Unit:krw(buy3),buy3Total:krw(buy3*3),buy5Unit:krw(buy5),buy5Total:krw(buy5*5),buy10Unit:krw(buy10),buy10Total:krw(buy10*10),silverBuy:krw(p.silverBuy),silverSell:krw(p.silverBuy-150000),sellMain:num(p.sellGoldbar),sellGoldbar:krw(p.sellGoldbar),sellLump:krw(p.sellGoldbar-5000),sellRing:krw(p.sellGoldbar-10000),sellNecklace:krw(p.sellGoldbar-15000),sell18k:krw(p.sell18k),sell14k:krw(p.sell14k)};Object.entries(values).forEach(([id,value])=>{if(el(id))el(id).textContent=value});}updateDailyPrice();
+const GOLD_API='https://api.gold-api.com/price/XAU',FX_API='https://open.er-api.com/v6/latest/USD';let marketState={gold:null,fx:null,goldAt:null,fxAt:null};
+const datetime=timestamp=>new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(timestamp));
+async function fetchJSON(url){const controller=new AbortController();const t=setTimeout(()=>controller.abort(),10000);try{const response=await fetch(url,{cache:'no-store',signal:controller.signal});if(!response.ok)throw new Error('HTTP '+response.status);return await response.json()}finally{clearTimeout(t)}}
+async function updateInternationalMarket(){const results=await Promise.allSettled([fetchJSON(GOLD_API),fetchJSON(FX_API)]);const goldResult=results[0],fxResult=results[1];let goodGold=false,goodFx=false;
+if(goldResult.status==='fulfilled'){const d=goldResult.value;const price=Number(d.price);const at=Date.parse(d.updatedAt);if(price>0&&Number.isFinite(price)&&Number.isFinite(at)&&at<=Date.now()+300000){goodGold=true;marketState.gold=price;marketState.goldAt=at;el('goldSpot').textContent='$'+price.toLocaleString('ko-KR',{minimumFractionDigits:2,maximumFractionDigits:2});} }
+if(!goodGold){marketState.gold=null;marketState.goldAt=null;el('goldSpot').textContent='현재 조회 불가'}
+if(fxResult.status==='fulfilled'){const d=fxResult.value;const rate=Number(d.rates?.KRW);const at=Number(d.time_last_update_unix)*1000;if(d.result==='success'&&rate>0&&Number.isFinite(rate)&&Number.isFinite(at)&&at<=Date.now()+300000){goodFx=true;marketState.fx=rate;marketState.fxAt=at;el('usdKrw').textContent=rate.toLocaleString('ko-KR',{minimumFractionDigits:2,maximumFractionDigits:2})+'원';}}
+if(!goodFx){marketState.fx=null;marketState.fxAt=null;el('usdKrw').textContent='현재 조회 불가'}
+if(goodGold&&goodFx){el('rawGold').textContent=krw(marketState.gold*marketState.fx/31.1034768*3.75);el('updatedAt').textContent='금 '+datetime(marketState.goldAt)+' / 환율 '+datetime(marketState.fxAt);el('marketStatus').textContent='각 제공처의 최근 갱신값 · 동일 시점 가격은 아닙니다.'}else{el('rawGold').textContent='현재 계산 불가';el('updatedAt').textContent='일부 데이터 조회 실패';el('marketStatus').textContent='외부 서비스 상태에 따라 일시적으로 조회되지 않을 수 있습니다.'}}
+updateInternationalMarket();setInterval(updateInternationalMarket,60000);
+  </script>
+ </body>
+</html>

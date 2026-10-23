@@ -1136,7 +1136,7 @@ section {
       <div class="gp-top">
        <div>
         <span class="gp-badge">
-         매장 고시 시세
+         매장 입력 시세
         </span>
         <h3>
          <span id="priceTitleDate">
@@ -1152,8 +1152,9 @@ section {
          <span id="priceTime">
           10:00
          </span>
-         기준
+         현재 시각 (한국시간)
         </p>
+        <p style="font-size:11px;color:#bfcbd9;margin-top:5px">※ 매장 가격은 자동 갱신되지 않으며, 최종 가격은 상담 시 확인해 주세요.</p>
        </div>
        <div class="gp-live-info">
         국제 금시세 · 환율
@@ -2110,14 +2111,6 @@ function updateDailyPrice() {
   const buy10 = buy1 - 10000;
   const buy20 = buy10;
   const buy100 = buy10;
-  const stamp = new Date(p.asOf);
-  if (Number.isFinite(stamp.getTime())) {
-    const parts = new Intl.DateTimeFormat('en-US', {timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(stamp);
-    const part = type => parts.find(item => item.type === type)?.value;
-    el('priceTitleDate').textContent = `${Number(part('month'))}월 ${Number(part('day'))}일`;
-    el('priceFullDate').textContent = `${part('year')}.${part('month')}.${part('day')}`;
-    el('priceTime').textContent = `${part('hour')}:${part('minute')}`;
-  }
   const values = {
     buyMain1:num(p.buyLump), buy1Unit:krw(buy1), buy1Total:krw(buy1),
     buy3Unit:krw(buy3), buy3Total:krw(buy3*3),
@@ -2133,6 +2126,20 @@ function updateDailyPrice() {
   Object.entries(values).forEach(([id,value]) => {if(el(id)) el(id).textContent = value;});
 }
 updateDailyPrice();
+// 화면에 표시되는 날짜와 시간만 한국 현재 시각으로 자동 갱신합니다.
+// 매장 판매·매입 가격은 prices.js의 마지막 입력값으로 유지됩니다.
+function updateLiveClock() {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+  }).formatToParts(new Date());
+  const part = type => parts.find(x => x.type === type)?.value;
+  el('priceTitleDate').textContent = `${Number(part('month'))}월 ${Number(part('day'))}일`;
+  el('priceFullDate').textContent = `${part('year')}.${part('month')}.${part('day')}`;
+  el('priceTime').textContent = `${part('hour')}:${part('minute')}`;
+}
+updateLiveClock();
+setInterval(updateLiveClock, 1000);
 const GOLD_API='https://api.gold-api.com/price/XAU',FX_API='https://open.er-api.com/v6/latest/USD';let marketState={gold:null,fx:null,goldAt:null,fxAt:null};
 const datetime=timestamp=>new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(timestamp));
 async function fetchJSON(url){const controller=new AbortController();const t=setTimeout(()=>controller.abort(),10000);try{const response=await fetch(url,{cache:'no-store',signal:controller.signal});if(!response.ok)throw new Error('HTTP '+response.status);return await response.json()}finally{clearTimeout(t)}}

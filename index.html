@@ -40,19 +40,19 @@ const DAILY_PRICE = {
 
   // 손님이 사실 때: 순금 덩어리 1돈 기준가
   // GBK 1돈 = 기준가 + 5,000원 / 3돈·5돈·10돈 단가는 기존 계산식 적용
-  buyLump: 692000,
+  buyLump: 675000,
 
   // 손님이 파실 때: 검인 골드바 1돈
   // 순금 덩어리·반지·목걸이 매입가는 기존 차감식 적용
-  sellGoldbar: 673000,
+  sellGoldbar: 650000,
 
   // 손님이 파실 때: 18K · 14K
-  sell18k: 497000,
-  sell14k: 386000,
+  sell18k: 480000,
+  sell14k: 372000,
 
   // 손님이 사실 때: 실버바 1kg
   // 파실 때 은 매입가는 이 금액에서 150,000원을 차감
-  silverBuy: 2670000
+  silverBuy: 2530000
 };
 // ★★★★★ 매일 수정하는 가격 설정 끝 ★★★★★
 const el=id=>document.getElementById(id); const num=v=>Math.round(Number(v)).toLocaleString('ko-KR');const krw=v=>num(v)+'원';

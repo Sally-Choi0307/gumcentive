@@ -18,10 +18,10 @@ const DAILY_PRICE = {
   sellGoldbar: 655000,
 
   // 손님이 파실 때 · 18K 1돈
-  sell18k: 484000,
+  sell18k: 485000,
 
   // 손님이 파실 때 · 14K 1돈
-  sell14k: 376000,
+  sell14k: 377000,
 
   // 손님이 사실 때 · 실버바 1kg 판매가
   silverBuy: 2470000

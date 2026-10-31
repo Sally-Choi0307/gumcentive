@@ -21,7 +21,7 @@ const DAILY_PRICE = {
   sell18k: 470000,
 
   // 손님이 파실 때 · 14K 1돈
-  sell14k: 360000,
+  sell14k: 365000,
 
   // 손님이 사실 때 · 실버바 1kg 판매가
   silverBuy: 2320000

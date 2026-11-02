@@ -15,7 +15,7 @@ const DAILY_PRICE = {
   buyLump: 665000,
 
   // 손님이 파실 때 · 검인 골드바 1돈
-  sellGoldbar: 645000,
+  sellGoldbar: 640000,
 
   // 손님이 파실 때 · 18K 1돈
   sell18k: 477000,

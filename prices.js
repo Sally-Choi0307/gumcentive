@@ -15,13 +15,13 @@ const DAILY_PRICE = {
   buyLump: 695000,
 
   // 손님이 파실 때 · 검인 골드바 1돈
-  sellGoldbar: 675000,
+  sellGoldbar: 670000,
 
   // 손님이 파실 때 · 18K 1돈
-  sell18k: 502000,
+  sell18k: 496000,
 
   // 손님이 파실 때 · 14K 1돈
-  sell14k: 390000,
+  sell14k: 386000,
 
   // 손님이 사실 때 · 실버바 1kg 판매가
   silverBuy: 2440000

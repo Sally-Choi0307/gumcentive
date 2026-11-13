@@ -2123,7 +2123,7 @@ function updateDailyPrice() {
     silverBuy:krw(p.silverBuy), silverSell:krw(p.silverBuy-120000),
     sellMain:num(p.sellGoldbar), sellGoldbar:krw(p.sellGoldbar),
     sellLump:krw(p.sellGoldbar-5000), sellRing:krw(p.sellGoldbar-13000),
-    sellNecklace:krw(p.sellGoldbar-18000), sell18k:krw(p.sell18k), sell14k:krw(p.sell14k)
+    sellNecklace:krw(p.sellGoldbar-16000), sell18k:krw(p.sell18k), sell14k:krw(p.sell14k)
   };
   Object.entries(values).forEach(([id,value]) => {if(el(id)) el(id).textContent = value;});
 }

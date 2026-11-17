@@ -12,10 +12,10 @@ const DAILY_PRICE = {
    asOf: "2026-10-23T15:40:00+09:00",
 
   // 손님이 사실 때 · 24K 순금 덩어리 1돈
-  buyLump: 652000,
+  buyLump: 654000,
 
   // 손님이 파실 때 · 검인 골드바 1돈
-  sellGoldbar: 640000,
+  sellGoldbar: 645000,
 
   // 손님이 파실 때 · 18K 1돈
   sell18k: 477000,
@@ -24,7 +24,7 @@ const DAILY_PRICE = {
   sell14k: 371000,
 
   // 손님이 사실 때 · 실버바 1kg 판매가
-  silverBuy: 2200000
+  silverBuy: 2250000
 
 };
 
